@@ -4,7 +4,7 @@
 
 - BURGNIARD Paul
 - CHEHBI Merwan
-- DUMAS Erwan
+- DUMAS Erwann
 - AMBROZIC Quentin
 
 ## Objectif
