@@ -3,7 +3,7 @@
 ## Projet Webdev du groupe 5
 
 - BURGNIARD Paul
-- CHEBI Merwan
+- CHEHBI Merwan
 - DUMAS Erwan
 - AMBROZIC Quentin
 
