@@ -9,7 +9,7 @@
 
 ## Objectif
 
-Découverte du dévellopement full stack a travers un projet de dévellopment web.
+Découverte du dévelopement full stack a travers un projet de dévelopement web.
 
 ## Liste des balises de base html:
 
