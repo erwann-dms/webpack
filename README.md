@@ -10,3 +10,7 @@
 ## Objectif
 
 Découverte du dévellopement full stack a travers un projet de dévellopment web.
+
+## Liste des balises de bas html:
+
+https://allthetags.com/
