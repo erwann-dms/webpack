@@ -11,6 +11,6 @@
 
 Découverte du dévellopement full stack a travers un projet de dévellopment web.
 
-## Liste des balises de bas html:
+## Liste des balises de base html:
 
 https://allthetags.com/
