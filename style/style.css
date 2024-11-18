@@ -2,7 +2,7 @@
     color: black;
 }
 
-.button-85 {
+.button-nav {
     padding: 0.6em 2em;
     border: none;
     outline: none;
@@ -17,7 +17,7 @@
     touch-action: manipulation;
   }
   
-  .button-85:before {
+  .button-nav:before {
     content: "";
     background: linear-gradient(
       45deg,
@@ -57,7 +57,7 @@
     }
   }
   
-  .button-85:after {
+  .button-nav:after {
     z-index: -1;
     content: "";
     position: absolute;
