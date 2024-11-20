@@ -27,16 +27,10 @@ nav{
   .button-nav:before {
     content: "";
     background: linear-gradient(
-      45deg,
-      #ff0000,
-      #ff7300,
-      #fffb00,
-      #48ff00,
+      4deg,
       #00ffd5,
       #002bff,
-      #7a00ff,
-      #ff00c8,
-      #ff0000
+      #00ffd5
     );
     position: absolute;
     top: -2px;
@@ -47,7 +41,7 @@ nav{
     -webkit-filter: blur(5px);
     width: calc(100% + 4px);
     height: calc(100% + 4px);
-    animation: glowing-button-85 20s linear infinite;
+    animation: glowing-button-85 20s linear infinite, gradient-move 10s linear infinite;
     transition: opacity 0.3s ease-in-out;
     border-radius: 10px;
   }
@@ -58,6 +52,14 @@ nav{
     }
     50% {
       background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  @keyframes gradient-move {
+    0% {
+      background-position: 100% 100%;
     }
     100% {
       background-position: 0 0;
