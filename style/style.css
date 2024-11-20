@@ -149,7 +149,7 @@ nav.scrolled {
   border: none;
   outline: none;
   color: var(--text-color);
-  background: var(--background-button);
+  background: var(--background-button); /*modifier ici avec une image pour avoir un background derierre nos containers*/
   cursor: pointer;
   position: relative;
   z-index: 0;
