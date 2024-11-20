@@ -62,6 +62,7 @@
       background-position: 0 0;
     }
   }
+  
   @keyframes gradient-move {
     0% {
       background-position: 100% 100%;
@@ -94,29 +95,35 @@
   }
 
   .container-Team {
-
+    justify-content: space-around;
   }
 
   .container-Python {
-
+    justify-content: space-around;
   }
 
   .container-Java {
-
+    justify-content: space-around;
   }
 
   .container-JS {
-
+    justify-content: space-around;
   }
 
   .container-C\# {
-
+    justify-content: space-around;
   }
 
   .container-PHP {
-
+    justify-content: space-around;
   }
 
   .container-C\+\+ {
+    justify-content: space-around;
+  }
 
+  .h2.container {
+    background-image: linear-gradient(to right, #00ffd5,#002bff,);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
   }
