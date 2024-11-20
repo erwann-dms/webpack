@@ -7,3 +7,8 @@ function scrollFunction() {
         document.querySelector('nav').classList.remove('scrolled');
     }
 }
+
+function lightmodeToggle() {
+       var element = document.body;
+        element.classList.toggle("darkmode-toggle");
+} 
