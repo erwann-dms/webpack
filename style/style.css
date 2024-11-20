@@ -128,3 +128,9 @@
     justify-content: space-around;
     background-color: #222;
   }
+
+  h2 {
+    background-image: linear-gradient(to right, #00eeff, #0026ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
