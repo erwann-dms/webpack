@@ -10,5 +10,5 @@ function scrollFunction() {
 
 function lightmodeToggle() {
        var element = document.body;
-        element.classList.toggle("darkmode-toggle");
+        element.classList.toggle("light-toggle");
 } 
