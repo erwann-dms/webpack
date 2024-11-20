@@ -105,6 +105,8 @@ h2 {
   overflow: hidden;
   padding: 20px;
   text-align: center;
+  text-decoration: none;
+  color: inherit;
 }
 
 .f-container {
