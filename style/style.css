@@ -4,15 +4,20 @@
   --nav-link-color: white;
   --text-color: rgba(255, 255, 255, 0.658);
   --highlight-gradient: linear-gradient(4deg, #00ffd5, #002bff, #00ffd5);
-  
+  --header2-gradient: linear-gradient(to right, #00eeff, #0026ff)
 }
 
 .light-toggle{
   --background-button: #c2c4c6;
   --background-main: #eaeef2;
   --text-color: #0b0c0c;
+  --nav-link-color: #0b0c0c;
   --highlight-gradient: linear-gradient(4deg, #00ffd5, #002bff, #00ffd5);
-  
+  /* --header2-gradient: [a changer] */
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 body {
@@ -22,7 +27,7 @@ body {
 }
 
 h2 {
-  background-image: linear-gradient(to right, #00eeff, #0026ff);
+  background-image: var(--header2-gradient);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -129,6 +134,7 @@ nav.scrolled {
   gap: 20px;
 }
 
+/*
 .flex-container {
   width: 48%;
   background-color: var(--background-button);
@@ -139,6 +145,61 @@ nav.scrolled {
   text-align: center;
   text-decoration: none;
   color: inherit;
+}
+*/
+
+.flex-container {
+  padding: 20px;
+  width: 48%;
+  border: none;
+  outline: none;
+  color: var(--text-color);
+  background: var(--background-button); /*modifier ici avec une image pour avoir un background derierre nos containers*/
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+  margin-left: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.flex-container:before {
+  content: "";
+  position: absolute;
+  background: var(--highlight-gradient);
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite, gradient-move 10s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+.flex-container:hover:before {
+  opacity: 1;
+}
+
+.flex-container:active {
+  color: var(--background-main);
+}
+
+.flex-container:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--background-button);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
 }
 
 .f-container {
