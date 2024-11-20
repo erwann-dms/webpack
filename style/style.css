@@ -15,6 +15,7 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    text-decoration: none;
   }
   
   .button-nav:before {
@@ -68,4 +69,13 @@
     top: 0;
     border-radius: 10px;
   }
+
+  .nav-link {
+    color: white;
+    text-decoration: none;
+  }
   
+  .nav-link:hover {
+    color: white;
+    text-decoration: none;
+  }
