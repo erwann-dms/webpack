@@ -1,7 +1,7 @@
 :root {
   --background-main: #222;
   --background-button: #111;
-  --text-color: white;
+  --text-color: rgba(255, 255, 255, 0.658);
   --highlight-gradient: linear-gradient(4deg, #00ffd5, #002bff, #00ffd5);
   
 }
@@ -18,6 +18,10 @@ h2 {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 10px;
+}
+
+p {
+  color: var(--text-color);
 }
 
 * {
