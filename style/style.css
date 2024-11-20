@@ -98,13 +98,24 @@ h2 {
 }
 
 .flex-container {
-  width: 30%;
+  width: 48%;
   background-color: var(--background-main);
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   padding: 20px;
   text-align: center;
+}
+
+.f-container {
+  width: 100%;
+  background-color: var(--background-main);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+  gap: 40px;
 }
 
 @media (max-width: 768px) {
