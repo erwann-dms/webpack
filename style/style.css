@@ -2,6 +2,12 @@
     color: black;
 }
 
+nav{
+  display: flex;
+  flex-flow: column wrap;
+  
+}
+
 .button-nav {
     padding: 0.6em 2em;
     border: none;
