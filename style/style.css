@@ -124,6 +124,6 @@
 
   .h2.container {
     background-image: linear-gradient(to right, #00ffd5,#002bff,);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;    
   }
