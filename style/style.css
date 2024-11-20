@@ -16,6 +16,10 @@
   /* --header2-gradient: [a changer] */
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--background-main);
   font-family: Arial, sans-serif;
