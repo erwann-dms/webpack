@@ -2,12 +2,42 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="../../Style/style.css">
-  <script type="text/javascript" src="../../JS/dynamic.js" defer></script>   
+  <link rel="stylesheet" type="text/css" href="../Style/style.css">
+  <script type="text/javascript" src="../JS/dynamic.js" defer></script>   
   <title>Notre Team</title>
-  <link rel="shortcut icon" href="../../photos/logo1.png">
+  <link rel="shortcut icon" href="../photos/logo1.png">
 </head>
 <body>
+  <nav>
+    <div class="nav">
+      <a class="nav-link" nav-link href="../index.html"><img src="../photos/logo2.png" alt="logo" style="width: 70px; height: 70px; margin-bottom: 20px;"></a>
+      <a class="nav-link" href="../index.html"><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">Team</button></a>
+      <a class="nav-link" href="../index.html"><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">Python</button></a>
+      <a class="nav-link" href="../index.html"><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">Java</button></a>
+      <a class="nav-link" href="../index.html"><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">JS</button></a>
+      <a class="nav-link" href="../index.html"><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">C#</button></a>
+      <a class="nav-link" href="../index.html"><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">PHP</button></a>
+      <a class="nav-link" href="../index.html"><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">C++</button></a>
+      <div class="nightmode-toggle">
+          <label class="switch-label">
+            <input type="checkbox" class="checkbox" onchange="lightmodeToggle()">
+            <span class="slider"></span>
+          </label>
+      </div>
+    </div>
+  </nav>
+
+  <div class="big-div">
+    <div class="carousel">
+      <button class="carousel-button left" id="prevBtn">◀</button>
+      <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Slide+1" alt="Slide 1"></div>
+          <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Slide+2" alt="Slide 2"></div>
+          <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Slide+3" alt="Slide 3"></div>
+      </div>
+      <button class="carousel-button right" id="nextBtn">▶</button>
+  </div>
   
+  </div>
 </body>
 </html>
