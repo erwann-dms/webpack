@@ -14,25 +14,21 @@ function lightmodeToggle() {
 } 
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Sélection des éléments du carrousel
     const track = document.getElementById("carouselTrack");
     const items = document.querySelectorAll(".carousel-item");
     const prevButton = document.getElementById("prevBtn");
     const nextButton = document.getElementById("nextBtn");
 
-    let currentIndex = 0; // Index actuel du carrousel
+    let currentIndex = 0; 
 
-    // Fonction pour mettre à jour la position du carrousel
     const updateCarousel = () => {
-        const itemWidth = items[0].offsetWidth; // Largeur de chaque élément
-        track.style.transform = `translateX(-${currentIndex * itemWidth}px)`; // Translation du track
+        const itemWidth = items[0].offsetWidth; 
+        track.style.transform = `translateX(-${currentIndex * itemWidth}px)`; 
 
-        // Gestion de l'état des boutons
         prevButton.disabled = currentIndex === 0;
         nextButton.disabled = currentIndex === items.length - 1;
     };
 
-    // Événements pour les boutons
     prevButton.addEventListener("click", () => {
         if (currentIndex > 0) {
             currentIndex--;
@@ -47,10 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Mise à jour lors du redimensionnement de la fenêtre
     window.addEventListener("resize", updateCarousel);
-
-    // Initialisation
+    
     updateCarousel();
 });
 
