@@ -515,9 +515,7 @@ nav.scrolled {
     cursor: not-allowed;
 }
 
-
-
-.body{
+.main{
   background-color:var(--background-main);
   color:var(--text-color);
   font-family: Arial, sans-serif;
@@ -531,7 +529,7 @@ nav.scrolled {
   border: none;
   outline: none;
   color: var(--text-color);
-  background: var(--background-button); /*modifier ici avec une image pour avoir un background derierre nos containers*/
+  background: var(--background-button);
   cursor: pointer;
   position: relative;
   z-index: 0;
@@ -546,10 +544,10 @@ nav.scrolled {
 .Guardiaphoto-q{
   width: 150px;
   height: 200px;
-  position: relative; /* Position par rapport au conteneur parent */
+  position: relative;
   top: 0px;
   left: 0px;
-  border-radius: 30%; /* Rendre l'image circulaire */
+  border-radius: 30%; 
   border: 2px solid white;
 }
 
