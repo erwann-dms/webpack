@@ -15,7 +15,7 @@
   --nav-link-color: #0b0c0c;
   --highlight-gradient: linear-gradient(4deg, #00ffd5, #002bff, #00ffd5);
   /* --header2-gradient: [a changer] */
-  --background-pic: url('../photos/background.png')
+  --background-pic: url('../photos/background..png')
 }
 
 html{
@@ -203,12 +203,13 @@ nav.scrolled {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: var(--background-button);
+  background: var(--background-pic);
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
   left: 0;
   top: 0;
   border-radius: 10px;
-  content: "";
-  background: none;
 }
 
 /* .f-container {
