@@ -477,10 +477,10 @@ nav.scrolled {
 }
 
 .carousel-item {
-    flex: 1 0 100%;
-    text-align: center;
-    overflow: hidden;
+  min-width: 100%;
+  flex: 0 0 100%;
 }
+
 
 .carousel-item img {
     width: 100%;
