@@ -163,6 +163,7 @@ nav.scrolled {
   text-align: center;
   text-decoration: none;
   color: inherit;
+  box-shadow: 5px 2.5px 2.5px var(--text-color);
 }
 
 .flex-container:before {
