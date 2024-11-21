@@ -19,11 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const prevButton = document.getElementById("prevBtn");
     const nextButton = document.getElementById("nextBtn");
 
-    let currentIndex = 0;
+    let currentIndex = 0; 
 
     const updateCarousel = () => {
-        const itemWidth = items[0].getBoundingClientRect().width;
-        track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+        const itemWidth = items[0].offsetWidth; 
+        track.style.transform = `translateX(-${currentIndex * itemWidth}px)`; 
 
         prevButton.disabled = currentIndex === 0;
         nextButton.disabled = currentIndex === items.length - 1;
@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     window.addEventListener("resize", updateCarousel);
-
+    
     updateCarousel();
 });
+
