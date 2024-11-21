@@ -13,31 +13,37 @@ function lightmodeToggle() {
         element.classList.toggle("light-toggle");
 } 
 
-const track = document.getElementById('carouselTrack');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
+document.addEventListener("DOMContentLoaded", () => {
+    const track = document.getElementById("carouselTrack");
+    const items = document.querySelectorAll(".carousel-item");
+    const prevButton = document.getElementById("prevBtn");
+    const nextButton = document.getElementById("nextBtn");
 
-let currentIndex = 0;
+    let currentIndex = 0; 
 
-function updateButtons() {
-    prevBtn.disabled = currentIndex === 0;
-    nextBtn.disabled = currentIndex === track.children.length - 1;
-}
+    const updateCarousel = () => {
+        const itemWidth = items[0].offsetWidth; 
+        track.style.transform = `translateX(-${currentIndex * itemWidth}px)`; 
 
-prevBtn.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-        track.style.transform = `translateX(-${currentIndex * 100}%)`;
-        updateButtons();
-    }
+        prevButton.disabled = currentIndex === 0;
+        nextButton.disabled = currentIndex === items.length - 1;
+    };
+
+    prevButton.addEventListener("click", () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    });
+
+    nextButton.addEventListener("click", () => {
+        if (currentIndex < items.length - 1) {
+            currentIndex++;
+            updateCarousel();
+        }
+    });
+
+    window.addEventListener("resize", updateCarousel);
+
+    updateCarousel();
 });
-
-nextBtn.addEventListener('click', () => {
-    if (currentIndex < track.children.length - 1) {
-        currentIndex++;
-        track.style.transform = `translateX(-${currentIndex * 100}%)`;
-        updateButtons();
-    }
-});
-
-updateButtons();
