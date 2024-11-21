@@ -13,7 +13,7 @@ function lightmodeToggle() {
         element.classList.toggle("light-toggle");
 } 
 
-/*document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     const track = document.getElementById("carouselTrack");
     const items = document.querySelectorAll(".carousel-item");
     const prevButton = document.getElementById("prevBtn");
@@ -47,4 +47,3 @@ function lightmodeToggle() {
 
     updateCarousel();
 });
-*/
