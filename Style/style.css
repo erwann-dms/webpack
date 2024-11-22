@@ -17,18 +17,18 @@
   --highlight-gradient: linear-gradient(4deg, #00ffd5, #002bff, #00ffd5);
   /* --header2-gradient: [a changer] */
   --background-pic: url('../photos/background..png');
-  --background-gradient: linear-gradient(128deg, #ffffff 0%, #00bae9 100%, #0096b4 100%);
+  --background-gradient: linear-gradient(128deg, #ffffff 0%, #aceeff 100%, #93edff 100%);
 }
 
 html{
   height: 100%;
-  background-color: var(--background-main);
-  background: var(--background-gradient);
   scroll-behavior: smooth;
 }
 
 body {
   font-family: Arial, sans-serif;
+  background-color: var(--background-main);
+  background: var(--background-gradient);
   color: var(--text-color);
 }
 
@@ -248,6 +248,7 @@ nav.scrolled {
   text-decoration: none;
   color: inherit;
   box-shadow: 5px 2.5px 2.5px var(--text-color);
+
 }
 
 .f-container:before {
@@ -287,8 +288,69 @@ nav.scrolled {
   border-radius: 10px;
 }
 
+.f-container2 {
+  padding: 15px;
+  width: 97%;
+  border: none;
+  outline: none;
+  color: var(--text-color);
+  background: var(--background-button); /*modifier ici avec une image pour avoir un background derierre nos containers*/
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+  margin: auto;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 5px 2.5px 2.5px var(--text-color);
+  margin-top: 20px;
+}
+
+.f-container2:before {
+  content: "";
+  position: absolute;
+  background: var(--highlight-gradient);
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite, gradient-move 10s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+.f-container2:hover:before {
+  opacity: 1;
+}
+
+.f-container2:active {
+  color: var(--background-main);
+}
+
+.f-container2:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--background-button);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
 @media (max-width: 768px) {
   .flex-container {
+      width: 98%;
+  }
+}
+
+@media (max-width: 768px) {
+  .flex-container2 {
       width: 98%;
   }
 }
@@ -555,70 +617,118 @@ nav.scrolled {
   text-align: justify;
   background-color: var(--background-button);
 } 
-.button-86 {
-  all: unset;
-  width: 100px;
-  height: 30px;
-  font-size: 16px;
-  background: transparent;
-  border: none;
+
+.bd-mrwn {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-gradient);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
   position: relative;
-  color: #f0f0f0;
-  cursor: pointer;
-  z-index: 1;
-  padding: 10px 20px;
+}
+
+.snowflakes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  color: white;
+  font-size: 10px;
+  user-select: none;
+  animation: snow 10s linear infinite;
+}
+
+@keyframes snow {
+  to {
+      transform: translateY(100vh);
+  }
+}
+
+.snowflakes .snowflake:nth-child(odd) {
+  animation-duration: 12s;
+  animation-delay: -5s;
+}
+
+.snowflakes .snowflake:nth-child(even) {
+  animation-duration: 15s;
+  animation-delay: -3s;
+}
+
+
+.photo-container {
+  margin-top: 50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #fff;
+}
+
+.photo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--header2-gradient);
+  margin-top: 20px;
+  text-shadow: var(--header2-gradient)
+}
+
+.bio {
+  margin-top: 20px;
+  font-size: 20px;
+  color: white;
+  background-color: black;
+  padding: 30px;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.button {
+  background-color: #333;
+  color: white;
+  border: 2px solid #444;
+  border-radius: 5px;
+  padding: 15px 30px;
+  margin: 0 10px;
+  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  white-space: nowrap;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  font-size: 18px;
+  transition: background-color 0.3s;
 }
 
-.button-86::after,
-.button-86::before {
-  content: '';
-  position: center;
-  bottom: 0;
-  right: 0;
-  z-index: -99999;
-  transition: all .4s;
+.button:hover {
+  background-color: #444;
 }
 
-.button-86::before {
-  transform: translate(0%, 0%);
-  width: 100%;
-  height: 100%;
-  background: #28282d;
-  border-radius: 10px;
+.button i {
+  margin-right: 8px;
 }
-
-.button-86::after {
-  transform: translate(10px, 10px);
-  width: 35px;
-  height: 35px;
-  background: #ffffff15;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border-radius: 50px;
-}
-
-.button-86:hover::before {
-  transform: translate(5%, 20%);
-  width: 110%;
-  height: 110%;
-}
-
-.button-86:hover::after {
-  border-radius: 10px;
-  transform: translate(0, 0);
-  width: 100%;
-  height: 100%;
-}
-
-.button-86:active::after {
-  transition: 0s;
-  transform: translate(0, 5%);
-}
-

@@ -8,12 +8,24 @@ function scrollFunction() {
     }
 }
 
-function lightmodeToggle() {
+function checklightmode() {
+    var checkbox = document.getElementById("lightmode");
+    setLightmode(checkbox.checked);
+}
+
+function setLightmode(param) {
        var element = document.body;
-        element.classList.toggle("light-toggle");
+       if (param) {
+        element.classList.add("light-toggle");
+       } else {
+        element.classList.remove("light-toggle");
+       }
+        
 } 
 
 document.addEventListener("DOMContentLoaded", () => {
+    checklightmode() // check si la page doit etre initialisée avec le lightmode pré activé
+
     const track = document.getElementById("carouselTrack");
     const items = document.querySelectorAll(".carousel-item");
     const prevButton = document.getElementById("prevBtn");
