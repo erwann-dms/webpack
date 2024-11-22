@@ -1,0 +1,176 @@
+<!DOCTY<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de Merwan CHEHBI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Flocons de neige en fond */
+        .snowflakes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: white;
+            font-size: 10px;
+            user-select: none;
+            animation: snow 10s linear infinite;
+        }
+
+        @keyframes snow {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+
+        /* Générer des flocons de neige aléatoires */
+        .snowflakes .snowflake:nth-child(odd) {
+            animation-duration: 12s;
+            animation-delay: -5s;
+        }
+        
+        .snowflakes .snowflake:nth-child(even) {
+            animation-duration: 15s;
+            animation-delay: -3s;
+        }
+
+        /* Emplacement photo */
+        .photo-container {
+            margin-top: 50px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #fff;
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Nom avec surbrillance */
+        .name {
+            font-size: 48px;
+            font-weight: bold;
+            color: #1E90FF;
+            margin-top: 20px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 255, 0.5);
+        }
+
+        /* Bio */
+        .bio {
+            margin-top: 20px;
+            font-size: 20px;
+            color: white;
+            background-color: black;
+            padding: 30px;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+        }
+
+        /* Boutons */
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            background-color: #333;
+            color: white;
+            border: 2px solid #444;
+            border-radius: 5px;
+            padding: 15px 30px;
+            margin: 0 10px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #444;
+        }
+
+        .button i {
+            margin-right: 8px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Flocons de neige -->
+    <div class="snowflakes">
+        <div class="snowflake" style="left: 10%; animation-duration: 10s; animation-delay: 0s;">❄️</div>
+        <div class="snowflake" style="left: 20%; animation-duration: 12s; animation-delay: -2s;">❄️</div>
+        <div class="snowflake" style="left: 30%; animation-duration: 14s; animation-delay: -4s;">❄️</div>
+        <div class="snowflake" style="left: 40%; animation-duration: 9s; animation-delay: -1s;">❄️</div>
+        <div class="snowflake" style="left: 50%; animation-duration: 15s; animation-delay: -3s;">❄️</div>
+        <div class="snowflake" style="left: 60%; animation-duration: 13s; animation-delay: -5s;">❄️</div>
+        <div class="snowflake" style="left: 70%; animation-duration: 11s; animation-delay: -6s;">❄️</div>
+        <div class="snowflake" style="left: 80%; animation-duration: 16s; animation-delay: -7s;">❄️</div>
+        <div class="snowflake" style="left: 90%; animation-duration: 17s; animation-delay: -8s;">❄️</div>
+    </div>
+
+    <!-- Photo -->
+    <div class="photo-container">
+        <img src="votre-photo.jpg" alt="Votre photo">
+    </div>
+
+    <!-- Nom -->
+    <div class="name">
+        Merwan CHEHBI
+    </div>
+
+    <!-- Bio -->
+    <div class="bio">
+        <p>Votre bio ici. Vous pouvez parler de vous, de vos compétences, de votre expérience, ou de ce qui vous passionne. C'est l'endroit idéal pour vous présenter.</p>
+    </div>
+
+    <!-- Boutons -->
+    <div class="buttons">
+        <a href="https://www.linkedin.com/in/merwanchehbi/" class="button" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/merwanchehbi" class="button" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="votre-lien-vers-le-cv" class="button" target="_blank">
+            <i class="fas fa-file-alt"></i> Mon CV
+        </a>
+    </div>
+
+</body>
+</html>
