@@ -52,7 +52,7 @@
             animation-duration: 12s;
             animation-delay: -5s;
         }
-        
+
         .snowflakes .snowflake:nth-child(even) {
             animation-duration: 15s;
             animation-delay: -3s;
@@ -83,13 +83,16 @@
             white-space: nowrap;
         }
 
-        /* Animation de frappe pour le nom */
+        /* Animation de frappe pour chaque lettre avec curseur */
         .name span {
             display: inline-block;
             opacity: 0;
-            animation: typing 3s steps(20) forwards;
+            position: relative;
+            padding-right: 2px; /* Ajout d'un espace pour le curseur */
+            animation: typing 3s steps(30) forwards;
         }
 
+        /* Animations pour chaque caractère */
         .name span:nth-child(1) {
             animation-delay: 0s;
         }
@@ -151,9 +154,30 @@
             animation-delay: 1.9s;
         }
 
+        /* Effet de typewriter */
         @keyframes typing {
-            to {
+            0% {
+                opacity: 0;
+            }
+            100% {
                 opacity: 1;
+            }
+        }
+
+        /* Curseur clignotant */
+        .name::after {
+            content: '|';
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 48px;
+            color: #1E90FF;
+            animation: blink 0.7s step-end infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
             }
         }
 
@@ -222,17 +246,4 @@
         <span>M</span><span>e</span><span>r</span><span>w</span><span>a</span><span>n</span> <span>C</span><span>H</span><span>E</span><span>H</span><span>B</span><span>I</span>
     </div>
 
-    <div class="bio">
-        <p>Je m’appelle Merwan, j’ai 18 ans et je suis originaire de Vienne, dans l'agglomération lyonnaise.
-            Passionné par l’informatique depuis de nombreuses années, je me suis intéressé il y a maintenant 2 ans à la cybersécurité.
-            Parmis mes compétences premières dans le domaine de la cybersécurité : </br>
-            -Niveau Intermédiaire en Cryptanalyse, stéganographie et en Pentest </br>
-            -Niveau Débutant en Web, Programmation , Forensic et SOC
-            </p>
-    </div>
-
-    <div class="buttons">
-        <a href="https://www.linkedin.com/in/mchehbi/" class="button" target="_blank">
-            <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-       
+   
