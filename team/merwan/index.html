@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+<!DOCTY<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page de Merwan CHEHBI</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -18,6 +19,45 @@
             justify-content: center;
             height: 100vh;
             text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Flocons de neige en fond */
+        .snowflakes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: white;
+            font-size: 10px;
+            user-select: none;
+            animation: snow 10s linear infinite;
+        }
+
+        @keyframes snow {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+
+        /* Générer des flocons de neige aléatoires */
+        .snowflakes .snowflake:nth-child(odd) {
+            animation-duration: 12s;
+            animation-delay: -5s;
+        }
+        
+        .snowflakes .snowflake:nth-child(even) {
+            animation-duration: 15s;
+            animation-delay: -3s;
         }
 
         /* Emplacement photo */
@@ -86,9 +126,23 @@
         .button i {
             margin-right: 8px;
         }
+
     </style>
 </head>
 <body>
+
+    <!-- Flocons de neige -->
+    <div class="snowflakes">
+        <div class="snowflake" style="left: 10%; animation-duration: 10s; animation-delay: 0s;">❄️</div>
+        <div class="snowflake" style="left: 20%; animation-duration: 12s; animation-delay: -2s;">❄️</div>
+        <div class="snowflake" style="left: 30%; animation-duration: 14s; animation-delay: -4s;">❄️</div>
+        <div class="snowflake" style="left: 40%; animation-duration: 9s; animation-delay: -1s;">❄️</div>
+        <div class="snowflake" style="left: 50%; animation-duration: 15s; animation-delay: -3s;">❄️</div>
+        <div class="snowflake" style="left: 60%; animation-duration: 13s; animation-delay: -5s;">❄️</div>
+        <div class="snowflake" style="left: 70%; animation-duration: 11s; animation-delay: -6s;">❄️</div>
+        <div class="snowflake" style="left: 80%; animation-duration: 16s; animation-delay: -7s;">❄️</div>
+        <div class="snowflake" style="left: 90%; animation-duration: 17s; animation-delay: -8s;">❄️</div>
+    </div>
 
     <!-- Photo -->
     <div class="photo-container">
@@ -117,9 +171,6 @@
             <i class="fas fa-file-alt"></i> Mon CV
         </a>
     </div>
-
-    <!-- Script pour icônes -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 </body>
 </html>
