@@ -24,7 +24,7 @@ function setLightmode(param) {
 } 
 
 document.addEventListener("DOMContentLoaded", () => {
-    checklightmode() // check si la page doit etre initialisée avec le lightmode pré activé
+    checklightmode()
 
     const track = document.getElementById("carouselTrack");
     const items = document.querySelectorAll(".carousel-item");
