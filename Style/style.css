@@ -6,7 +6,7 @@
   --highlight-gradient: linear-gradient(4deg, #00ffd5, #002bff, #00ffd5);
   --header2-gradient: linear-gradient(to right, #00eeff, #0026ff);
   --background-pic: url('../photos/background.png');
-  --background-gradient: linear-gradient(128deg, rgba(0,0,0,1) 0%, rgb(2, 0, 65) 100%, rgba(0,43,52,1) 100%);
+  --background-gradient: linear-gradient(128deg, #000000 0%, #020041 50%, #002B34 100%);
 }
 
 .light-toggle{
@@ -16,7 +16,8 @@
   --nav-link-color: #0b0c0c;
   --highlight-gradient: linear-gradient(4deg, #00ffd5, #002bff, #00ffd5);
   /* --header2-gradient: [a changer] */
-  --background-pic: url('../photos/background..png')
+  --background-pic: url('../photos/background..png');
+  --background-gradient: linear-gradient(128deg, #ffffff 0%, #00bae9 100%, #0096b4 100%);
 }
 
 html{
@@ -331,7 +332,6 @@ nav.scrolled {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: var(--background main);
     left: 0;
     top: 0;
     border-radius: 10px;
@@ -412,37 +412,30 @@ nav.scrolled {
 
   .container-Team {
     justify-content: space-around;
-    background-color: var(--background main);
   }
 
   .container-Python {
     justify-content: space-around;
-    background-color: var(--background main);
   }
 
   .container-Java {
     justify-content: space-around;
-    background-color: var(--background main);
   }
 
   .container-JS {
     justify-content: space-around;
-    background-color: var(--background main);
   }
 
   .container-C\# {
     justify-content: space-around;
-    background-color: var(--background main);
   }
 
   .container-PHP {
     justify-content: space-around;
-    background-color: var(--background main);
   }
 
   .container-C\+\+ {
     justify-content: space-around;
-    background-color: var(--background main);
   }
 
   .big-div {
@@ -461,8 +454,8 @@ nav.scrolled {
 
   .carousel {
     position: relative;
-    width: 100%;
-    max-width: 100%;
+    width: 97%;
+    max-width: 97%;
     height: auto;
     overflow: hidden;
     border-radius: 8px;
@@ -515,9 +508,7 @@ nav.scrolled {
     cursor: not-allowed;
 }
 
-
-
-.body{
+.main{
   background-color:var(--background-main);
   color:var(--text-color);
   font-family: Arial, sans-serif;
@@ -531,7 +522,7 @@ nav.scrolled {
   border: none;
   outline: none;
   color: var(--text-color);
-  background: var(--background-button); /*modifier ici avec une image pour avoir un background derierre nos containers*/
+  background: var(--background-button);
   cursor: pointer;
   position: relative;
   z-index: 0;
@@ -546,10 +537,10 @@ nav.scrolled {
 .Guardiaphoto-q{
   width: 150px;
   height: 200px;
-  position: relative; /* Position par rapport au conteneur parent */
+  position: relative;
   top: 0px;
   left: 0px;
-  border-radius: 30%; /* Rendre l'image circulaire */
+  border-radius: 30%; 
   border: 2px solid white;
 }
 
