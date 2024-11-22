@@ -23,7 +23,6 @@
             position: relative;
         }
 
-        /* Flocons de neige en fond */
         .snowflakes {
             position: absolute;
             top: 0;
@@ -49,7 +48,6 @@
             }
         }
 
-        /* Générer des flocons de neige aléatoires */
         .snowflakes .snowflake:nth-child(odd) {
             animation-duration: 12s;
             animation-delay: -5s;
@@ -60,7 +58,7 @@
             animation-delay: -3s;
         }
 
-        /* Emplacement photo */
+
         .photo-container {
             margin-top: 50px;
             width: 200px;
@@ -76,7 +74,6 @@
             object-fit: cover;
         }
 
-        /* Nom avec surbrillance */
         .name {
             font-size: 48px;
             font-weight: bold;
@@ -85,7 +82,6 @@
             text-shadow: 2px 2px 10px rgba(0, 0, 255, 0.5);
         }
 
-        /* Bio */
         .bio {
             margin-top: 20px;
             font-size: 20px;
@@ -97,7 +93,6 @@
             border-radius: 10px;
         }
 
-        /* Boutons */
         .buttons {
             display: flex;
             justify-content: center;
@@ -131,7 +126,6 @@
 </head>
 <body>
 
-    <!-- Flocons de neige -->
     <div class="snowflakes">
         <div class="snowflake" style="left: 10%; animation-duration: 10s; animation-delay: 0s;">❄️</div>
         <div class="snowflake" style="left: 20%; animation-duration: 12s; animation-delay: -2s;">❄️</div>
@@ -144,27 +138,28 @@
         <div class="snowflake" style="left: 90%; animation-duration: 17s; animation-delay: -8s;">❄️</div>
     </div>
 
-    <!-- Photo -->
     <div class="photo-container">
         <img src="votre-photo.jpg" alt="Votre photo">
     </div>
 
-    <!-- Nom -->
     <div class="name">
         Merwan CHEHBI
     </div>
 
-    <!-- Bio -->
     <div class="bio">
-        <p>Votre bio ici. Vous pouvez parler de vous, de vos compétences, de votre expérience, ou de ce qui vous passionne. C'est l'endroit idéal pour vous présenter.</p>
+        <p>Je m’appelle Merwan, j’ai 18 ans et je suis originaire de Vienne, dans l'agglomération lyonnaise.
+            Passionné par l’informatique depuis de nombreuses années, je me suis intéressé il y a maintenant 2 ans à la cybersécurité.
+            Parmis mes compétences premières dans le domaine de la cybersécurité : 
+            -Niveau Intermédiaire en Cryptanalyse, stéganographie et en Pentest
+            -Niveau Débutant en Web, Programmation , Forensic et SOC
+            </p>
     </div>
 
-    <!-- Boutons -->
     <div class="buttons">
-        <a href="https://www.linkedin.com/in/merwanchehbi/" class="button" target="_blank">
+        <a href="https://www.linkedin.com/in/mchehbi/" class="button" target="_blank">
             <i class="fab fa-linkedin"></i> LinkedIn
         </a>
-        <a href="https://github.com/merwanchehbi" class="button" target="_blank">
+        <a href="https://github.com/mrwn111" class="button" target="_blank">
             <i class="fab fa-github"></i> GitHub
         </a>
         <a href="votre-lien-vers-le-cv" class="button" target="_blank">
