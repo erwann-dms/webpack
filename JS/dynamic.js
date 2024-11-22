@@ -24,8 +24,6 @@ function setLightmode(param) {
 } 
 
 document.addEventListener("DOMContentLoaded", () => {
-    checklightmode()
-
     const track = document.getElementById("carouselTrack");
     const items = document.querySelectorAll(".carousel-item");
     const prevButton = document.getElementById("prevBtn");
@@ -35,22 +33,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const updateCarousel = () => {
         const itemWidth = items[0].offsetWidth; 
-        track.style.transform = `translateX(-${currentIndex * itemWidth}px)`; 
+        console.log('Item width:', itemWidth); 
 
-        prevButton.disabled = currentIndex === 0;
-        nextButton.disabled = currentIndex === items.length - 1;
+        track.style.transform = `translateX(-${currentIndex * itemWidth}px)`; 
+        console.log('Current index:', currentIndex);  
+
+        prevButton.disabled = currentIndex === 0; 
+        nextButton.disabled = currentIndex === items.length - 1;  
+        console.log('Prev button disabled:', prevButton.disabled);
+        console.log('Next button disabled:', nextButton.disabled);
     };
 
     prevButton.addEventListener("click", () => {
+        console.log('Previous button clicked');
         if (currentIndex > 0) {
-            currentIndex--;
+            currentIndex--; 
+            console.log('New index after prev:', currentIndex);  
             updateCarousel();
         }
     });
 
+    // Événement sur le bouton "Next"
     nextButton.addEventListener("click", () => {
+        console.log('Next button clicked');
         if (currentIndex < items.length - 1) {
-            currentIndex++;
+            currentIndex++; 
+            console.log('New index after next:', currentIndex);  
             updateCarousel();
         }
     });
