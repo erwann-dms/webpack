@@ -15,7 +15,7 @@
   --text-color: #0b0c0c;
   --nav-link-color: #0b0c0c;
   --highlight-gradient: linear-gradient(4deg, #00ffd5, #002bff, #00ffd5);
-  --header2-gradient: linear-gradient(to right, #ffffff, #00eeff);
+  /* --header2-gradient: [a changer] */
   --background-pic: url('../photos/background..png');
   --background-gradient: linear-gradient(128deg, #ffffff 0%, #aceeff 100%, #93edff 100%);
 }
@@ -622,7 +622,7 @@ nav.scrolled {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #111;
+  background-color: var(--background-gradient);
   color: white;
   display: flex;
   flex-direction: column;
