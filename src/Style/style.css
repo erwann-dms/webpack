@@ -26,12 +26,12 @@
 
 html {
   scroll-behavior: smooth;
-  height: 100vh;
+  height: 100%;
 }
 
 body {
   font-family: Arial, sans-serif;
-  height: 100vh; 
+  height: 100%; 
   margin: 0; 
   background: var(--background-gradient);
   background-size: cover; 
@@ -809,7 +809,7 @@ nav.scrolled {
   position: relative;
 }
 
-.bio-qt {
+.bio {
   margin-top: 20px;
   font-size: 20px;
   color: var(--text-color-bio);
