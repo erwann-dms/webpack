@@ -53,7 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Événement sur le bouton "Next"
     nextButton.addEventListener("click", () => {
         console.log('Next button clicked');
         if (currentIndex < items.length - 1) {
