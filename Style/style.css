@@ -518,7 +518,10 @@ nav.scrolled {
     box-shadow: 5px 2.5px 2.5px var(--text-color);
     align-self: center;
     position: center;
-    margin: 2.5%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
   }
 
   .carousel {
