@@ -24,16 +24,18 @@
   --text-color-bio: white;
 }
 
-html{
+html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
   font-family: Arial, sans-serif;
-  background-color: var(--background-main);
+  height: 100%; 
+  margin: 0; 
   background: var(--background-gradient);
-  background-size:contain;
-  background-position: center;
+  background-size: cover; 
+  background-position: center; 
   color: var(--text-color);
 }
 
@@ -788,4 +790,32 @@ nav.scrolled {
 .numbers .number:nth-child(even) {
   animation-duration: 15s;
   animation-delay: -3s;
+}
+
+
+.bd-qt {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-gradient);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.bio-qt {
+  margin-top: 20px;
+  font-size: 20px;
+  color: var(--text-color-bio);
+  background-color: var(--bio-background);
+  padding: 30px;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 10px;
 }
