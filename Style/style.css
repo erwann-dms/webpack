@@ -25,7 +25,7 @@
 }
 
 html{
-  height: 100%;
+  height: auto;
   scroll-behavior: smooth;
 }
 
@@ -505,8 +505,8 @@ nav.scrolled {
   }
 
   .big-div {
-    width: 95%;
-    height: 95%;
+    width: auto;
+    height: auto;
     background-color: var(--background-button);
     border-radius: 12px;
     overflow: hidden;
@@ -517,11 +517,11 @@ nav.scrolled {
     color: inherit;
     box-shadow: 5px 2.5px 2.5px var(--text-color);
     align-self: center;
-    position: center;
-    margin-top: 2.5%;
-    margin-bottom: 2.5%;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
   }
 
   .carousel {
