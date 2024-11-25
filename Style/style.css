@@ -505,8 +505,8 @@ nav.scrolled {
   }
 
   .big-div {
-    width: 97%;
-    height: 97%;
+    width: 95%;
+    height: 95%;
     background-color: var(--background-button);
     border-radius: 12px;
     overflow: hidden;
@@ -516,6 +516,9 @@ nav.scrolled {
     text-decoration: none;
     color: inherit;
     box-shadow: 5px 2.5px 2.5px var(--text-color);
+    align-self: center;
+    position: center;
+    margin: 2.5%;
   }
 
   .carousel {
