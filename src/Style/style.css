@@ -822,3 +822,24 @@ nav.scrolled {
   height: 100%;
   width: 100%;
 }
+
+.logo {
+  width: 200px;
+  height: 200px;
+  transform: rotateX(30deg) rotateY(30deg);
+  transform-style: preserve-3d;
+  animation: rotate 5s infinite linear;
+}
+
+.logo rect, .logo circle, .logo path {
+  transition: all 0.3s ease;
+}
+
+@keyframes rotate {
+  0% {
+      transform: rotateX(30deg) rotateY(30deg);
+  }
+  100% {
+      transform: rotateX(360deg) rotateY(360deg);
+  }
+}
