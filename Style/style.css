@@ -15,7 +15,7 @@
   --text-color: #0b0c0c;
   --nav-link-color: #0b0c0c;
   --highlight-gradient: linear-gradient(4deg, #00ffd5, #002bff, #00ffd5);
-  /* --header2-gradient: [a changer] */
+  --header2-gradient: linear-gradient(to right, #00eeff, #0026ff);
   --background-pic: url('../photos/background..png');
   --background-gradient: linear-gradient(128deg, #ffffff 0%, #aceeff 100%, #93edff 100%);
 }
