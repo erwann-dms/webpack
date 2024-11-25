@@ -26,12 +26,10 @@
 
 html {
   scroll-behavior: smooth;
-  height: 100%;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  height: 100%; 
+  font-family: Arial, sans-serif; 
   margin: 0; 
   background: var(--background-gradient);
   background-size: cover; 
@@ -818,4 +816,9 @@ nav.scrolled {
   width: 80%;
   max-width: 1100px;
   border-radius: 10px;
+}
+
+.megadiv{
+  height: 100%;
+  width: 100%;
 }
