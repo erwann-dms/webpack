@@ -7,6 +7,8 @@
   --header2-gradient: linear-gradient(to right, #00eeff, #0026ff);
   --background-pic: url('../photos/background.png');
   --background-gradient: linear-gradient(128deg, #000000 0%, #020041 50%, #002B34 100%);
+  --bio-background: #3f4041;
+  --text-color-bio: white;
 }
 
 .light-toggle{
@@ -18,6 +20,8 @@
   --header2-gradient: linear-gradient(to right, #00eeff, #0026ff);
   --background-pic: url('../photos/background..png');
   --background-gradient: linear-gradient(128deg, #ffffff 0%, #aceeff 100%, #93edff 100%);
+  --bio-background: #9fa0a1;
+  --text-color-bio: white;
 }
 
 html{
@@ -703,8 +707,8 @@ nav.scrolled {
 .bio {
   margin-top: 20px;
   font-size: 20px;
-  color: white;
-  background-color: black;
+  color: var(--text-color-bio);
+  background-color: var(--bio-background);
   padding: 30px;
   width: 80%;
   max-width: 800px;
