@@ -8,9 +8,19 @@ function scrollFunction() {
     }
 }
 
-function lightmodeToggle() {
+function checklightmode() {
+    var checkbox = document.getElementById("lightmode");
+    setLightmode(checkbox.checked);
+}
+
+function setLightmode(param) {
        var element = document.body;
-        element.classList.toggle("light-toggle");
+       if (param) {
+        element.classList.add("light-toggle");
+       } else {
+        element.classList.remove("light-toggle");
+       }
+        
 } 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -23,22 +33,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const updateCarousel = () => {
         const itemWidth = items[0].offsetWidth; 
-        track.style.transform = `translateX(-${currentIndex * itemWidth}px)`; 
+        console.log('Item width:', itemWidth); 
 
-        prevButton.disabled = currentIndex === 0;
-        nextButton.disabled = currentIndex === items.length - 1;
+        track.style.transform = `translateX(-${currentIndex * itemWidth}px)`; 
+        console.log('Current index:', currentIndex);  
+
+        prevButton.disabled = currentIndex === 0; 
+        nextButton.disabled = currentIndex === items.length - 1;  
+        console.log('Prev button disabled:', prevButton.disabled);
+        console.log('Next button disabled:', nextButton.disabled);
     };
 
     prevButton.addEventListener("click", () => {
+        console.log('Previous button clicked');
         if (currentIndex > 0) {
-            currentIndex--;
+            currentIndex--; 
+            console.log('New index after prev:', currentIndex);  
             updateCarousel();
         }
     });
 
     nextButton.addEventListener("click", () => {
+        console.log('Next button clicked');
         if (currentIndex < items.length - 1) {
-            currentIndex++;
+            currentIndex++; 
+            console.log('New index after next:', currentIndex);  
             updateCarousel();
         }
     });
