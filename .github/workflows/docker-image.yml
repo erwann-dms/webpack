@@ -3,14 +3,21 @@ name: Docker Image CI
 on:
   pull_request:
     branches: [ "prod" ]
+  workflow_dispatch: 
+    
 
 jobs:
 
-  build:
+  build_and_publish:
 
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
+    - name: login
+      run: docker login --username pburgniard --password ${{secrets.GITHUB_TOKEN}}
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ghcr.io/erwan-dms/Groupe5Webdev:$(date +%s)
+      run: docker build . --file Dockerfile --tag ghcr.io/pburgniard/groupe5webdev:$(date +%s)
+    - name: push image to ghcr.io
+      run: docker push ghcr.io/pburgniard/groupe5webdev:$(date +%s)
+
