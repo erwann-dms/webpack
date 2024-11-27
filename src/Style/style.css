@@ -843,3 +843,8 @@ nav.scrolled {
       transform: rotateX(360deg) rotateY(360deg);
   }
 }
+
+.video {
+  width: 200px;
+  height: 200px;
+}
