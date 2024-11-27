@@ -52,7 +52,7 @@
     <a href="/languages/python" class="flex-container">
       <div class="container-Python">
         <h2 class="container" id="python">Python</h2>
-        <video loop autoplay muted class="video"><source src="photos/python.mp4" type="video/mp4"/></video>      
+        <video loop autoplay muted><source src="photos/python.mp4" type="video/mp4"/></video>      
         <p> Python est un langage de programmation polyvalent, interprété et orienté objet, créé par Guido Van Rossum en 1991. Connu pour sa simplicité et sa lisibilité, il est particulièrement adapté aux débutants tout en offrant des fonctionnalités puissantes pour les développeurs expérimentés.</p>
         <br>
         <p>Nous avons pu faire l’expérience de pratiquer un projet avec Python en DevSecOps.</p>
@@ -62,7 +62,7 @@
     <a href="./languages/java" class="flex-container">
       <div class="container-Java">
         <h2 class="container" id="java">Java</h2>
-        <video loop autoplay muted class="video"><source src="photos/Java.mp4" type="video/mp4"/></video>
+        <video loop autoplay muted><source src="photos/Java.mp4" type="video/mp4"/></video>
         <p>Java est un langage de programmation orienté objet, créé par Sun Microsystems en 1995 et désormais géré par Oracle. Il est reconnu pour sa portabilité, sa robustesse et sa capacité à créer des applications multiplateformes.</p> 
         <br>
         <p>avons pu pratiquer du Java en codant des jeux en tant que projets indépendants.</p>
@@ -72,7 +72,7 @@
     <a href="./languages/javascript/" class="flex-container">
       <div class="container-JS">
         <h2 class="container" id="js">JS</h2>
-        <video loop autoplay muted class="video"><source src="photos/js.mp4" type="video/mp4"/></video>
+        <video loop autoplay muted><source src="photos/js.mp4" type="video/mp4"/></video>
         <p>JavaScript est un langage de programmation léger, interprété et orienté principalement vers le développement Web. Créé en 1995 par Brendan Eich, il est aujourd’hui un des piliers du Web moderne grâce à sa capacité à rendre les pages interactives. </p>
         <br>
         <p>Nous avons pu l’utiliser lors de création de sites. Nous l’avons majoritairement utilisé pour ajouter des objets réactifs comme des bannières apparaissantes et disparaissantes en montant/descendant sur la page ou en cliquant sur un autre lien afin de donner une illusion d’une meilleure fluidité.</p>
@@ -84,7 +84,7 @@
     <a href="./languages/PHP" class="flex-container">
       <div class="container-PHP">
         <h2 class="container" id="php">PHP</h2>
-        <video loop autoplay muted class="video"><source src="photos/php.mp4" type="video/mp4"/></video>
+        <video loop autoplay muted><source src="photos/php.mp4" type="video/mp4"/></video>
         <p>PHP (Hypertext Preprocessor) est un langage de programmation côté serveur, créé en 1994 par Rasmus Lerdorf. Conçu principalement pour le développement Web, il est utilisé pour générer des pages dynamiques et interactives. </p>
         <br>
         <p>Nous avons pu mettre en pratique des connaissances de PHP en travaillant sur des backdoors pour du Web et du logiciel.</p>
