@@ -14,10 +14,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: login
-      run: docker login --username pburgniard --password ${{secrets.GITHUB_TOKEN}}
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ghcr.io/pburgniard/groupe5webdev:$(date +%s)
-    - name: push image to ghcr.io
-      run: docker push ghcr.io/pburgniard/groupe5webdev:$(date +%s)
+    - name: Build and push the Docker image
+      run: |
+       docker build . --file Dockerfile --tag ghcr.io/pburgniard/groupe5webdev:$(date +%s)
+       docker login --username pburgniard --password ${{secrets.GITHUB_TOKEN}}
+       docker push ghcr.io/pburgniard/groupe5webdev
+
 
