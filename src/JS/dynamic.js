@@ -8,6 +8,13 @@ function scrollFunction() {
     }
 }
 
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  } 
+
 function checklightmode() {
     var checkbox = document.getElementById("lightmode");
     setLightmode(checkbox.checked);
@@ -17,8 +24,10 @@ function setLightmode(param) {
        var element = document.body;
        if (param) {
         element.classList.add("light-toggle");
+        setCookie("lightmode", "true", 15);
        } else {
         element.classList.remove("light-toggle");
+        setCookie("lightmode", "true", 15);
        }
         
 } 
