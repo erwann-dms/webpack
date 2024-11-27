@@ -89,5 +89,7 @@
   </div>
 </div>
 
+<a href="/partenaires">BOUTON TEMPORAIRE POUR MERWAN (PAS TOUCHER MTN MAIS VIRER PLUS TARD)</a>
+
 </body>
 </html>
