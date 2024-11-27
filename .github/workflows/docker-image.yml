@@ -17,7 +17,7 @@ jobs:
     - name: Build and push the Docker image
       run: |
        docker build . --file Dockerfile --tag ghcr.io/pburgniard/groupe5webdev:$(date +%s)
-       docker login --username pburgniard --password ${{secrets.GITHUB_TOKEN}}
+       docker login ghcr.io --username pburgniard --password ${{secrets.GITHUB_TOKEN}}
        docker push ghcr.io/pburgniard/groupe5webdev
 
 
