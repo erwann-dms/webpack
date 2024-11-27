@@ -16,8 +16,8 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build and push the Docker image
       run: |
-       docker build . --file Dockerfile --tag ghcr.io/pburgniard/groupe5webdev:$(date +%s)
-       docker login ghcr.io --username pburgniard --password ${{secrets.GITHUB_TOKEN}}
-       docker push ghcr.io/pburgniard/groupe5webdev
+       docker build . --file Dockerfile --tag ghcr.io/erwann-dms/groupe5webdev:$(date +%s)
+       docker login ghcr.io --username erwann-dms --password ${{secrets.GITHUB_TOKEN}}
+       docker push ghcr.io/erwann-dms/groupe5webdev
 
 
