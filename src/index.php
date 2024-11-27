@@ -80,7 +80,7 @@
     <a href="languages/PHP/index.html" class="flex-container">
       <div class="container-PHP">
         <h2 class="container" id="php">PHP</h2>
-        <img class="logo" src="photos/php.png">
+        <video loop autoplay muted class="video"><source src="photos/php.mp4" type="video/mp4"/></video>
         <p>PHP (Hypertext Preprocessor) est un langage de programmation côté serveur, créé en 1994 par Rasmus Lerdorf. Conçu principalement pour le développement Web, il est utilisé pour générer des pages dynamiques et interactives. </p>
         <br>
         <p>Nous avons pu mettre en pratique des connaissances de PHP en travaillant sur des backdoors pour du Web et du logiciel.</p>
