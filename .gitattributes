@@ -1,0 +1,4 @@
+*.yaml          eol=lf
+Dockerfile.dev  eol=lf
+Dockerfile      eol=lf
+start-apache    eol=lf
