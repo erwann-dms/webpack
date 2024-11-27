@@ -40,8 +40,9 @@
 <div class="f-container2"> 
       <div class="container-Team">
         <h2 class="container" id="team">Nos compétences</h2>
+        <br>
+        <br><p>Voici nos compétences en langages de programmations<p>
       </div>
-    </a>
   </div>
 
   <div class="grosse-flex">
@@ -88,8 +89,6 @@
     </a>
   </div>
 </div>
-
-<a href="/partenaires">BOUTON TEMPORAIRE POUR MERWAN (PAS TOUCHER MTN MAIS VIRER PLUS TARD)</a>
 
 </body>
 </html>
