@@ -845,6 +845,6 @@ nav.scrolled {
 }
 
 .video {
-  width: auto;
-  height: auto;
+  width: 500px;
+  height: 200px;
 }
