@@ -1,26 +1,24 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="html">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="../Style/style.css">
-  <script type="text/javascript" src="../JS/dynamic.js" defer></script>   
+  <link rel="stylesheet" type="text/css" href="/Style/style.css">
+  <script type="text/javascript" src="/JS/dynamic.js" defer></script>   
   <title>Notre Team</title>
-  <link rel="shortcut icon" href="../photos/logo1.png">
+  <link rel="shortcut icon" href="/photos/logo1.png">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
+<body class="body">
   <nav>
     <div class="nav">
-      <a class="nav-link" nav-link href="../index.html"><img src="../photos/logo2.png" alt="logo" style="width: 70px; height: 70px; margin-bottom: 20px;"></a>
-      <a class="nav-link" href="../index.html"><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">Team</button></a>
-      <a class="nav-link" href="../index.html"><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">Python</button></a>
-      <a class="nav-link" href="../index.html"><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">Java</button></a>
-      <a class="nav-link" href="../index.html"><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">JS</button></a>
-      <a class="nav-link" href="../index.html"><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">C#</button></a>
-      <a class="nav-link" href="../index.html"><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">PHP</button></a>
-      <a class="nav-link" href="../index.html"><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">C++</button></a>
+      <a class="nav-link" nav-link href="/."><img src="/photos/logo2.png" alt="logo" style="width: 70px; height: 70px; margin-bottom: 20px;"></a>
+      <a class="nav-link" href="/."><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">Team</button></a>
+      <a class="nav-link" href="/."><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">Python</button></a>
+      <a class="nav-link" href="/."><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">Java</button></a>
+      <a class="nav-link" href="/."><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">JS</button></a>
+      <a class="nav-link" href="/."><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">PHP</button></a>
       <div class="nightmode-toggle">
         <label class="switch-label">
           <input type="checkbox" class="checkbox" id="lightmode" onchange="checklightmode()">
@@ -30,6 +28,7 @@
     </div>
   </nav>
 
+  <div class="mega-div">
   <div class="big-div">
     <div class="carousel">
       <button class="carousel-button left" id="prevBtn">◀</button>
@@ -38,9 +37,9 @@
             <div class="bd-mrwn">
             
               <div class="photo-container" style="border: none; overflow: visible;"><img src="../photos/logo1.png"></div>
-              <div class="name">CodeTrix</div>
+              <div class="name">CodeTricks</div>
               <div class="bio">
-              <p>Our team of speacialists, I let you go to the next one
+              <p>Voici notre equipe CodeTricks ! 
               </p>
               </div>
               </div>
@@ -48,26 +47,29 @@
           <div class="carousel-item" alt="Slide 2">
             <div class="bd-mrwn">
             
-            <div class="photo-container"><img src="../photos/Ambqpic.jpg" alt=""></div>
-            <div class="name">Quentin AMBROZIC</div>
-            <div class="bio">
-            <p>Je m’appelle Quentin, j’ai 18 ans et je suis originaire de Saint Cyr au Mont d’Or, dans la périphérie de l’agglomération lyonnaise.
-                J’ai commencé à m'intéresser à l’informatique il y à 3 ans quand j’ai choisi les composants et construit mon PC fixe seul pour noël 2021. J’ai pu acquérir des connaissances en hardware. Suite à ça je me suis intéressé à la partie software en 2022 j’ai commencé à apprendre des bases de python de manière autodidacte . 
-                J’ai pris connaissance de la cybersécurité cette même année lors d’une porte ouverte à Eurexpo pour avoir une idée de carrière vers laquelle je voudrais me diriger . Depuis je me suis inscrit et été admis à Guardia Cybersecurity School. Grâce à cette école j’ai pus accumulé des connaissances avec les différents intervenants.
-                Ceci est un petit apperçu de ce que j’ai pus apprendre au cours du Bachelor que j’ai passé dans cette école: 
-                J’ai pus obtenir des connaissances approfondies sur du DevSecOps ,pentest ,SIR ,OSINT...
-            </p>
-            </div>
-            <div class="buttons">
-            <a href="https://www.instagram.com//qntn.amb" class="button" target="_blank">
-              <i class="fab fa-instagram"></i> Instagram
-            </a>
-            <a href="https://www.linkedin.com/in/quentin-ambrozic-728301301/" class="button" target="_blank">
-              <i class="fab fa-linkedin"></i> linkedin
-            </a>
-            </div>
-            </div>
-          </div>
+              <div class="photo-container"><img src="../photos/Ambqpic.jpg" alt=""></div>
+                <div class="name">Quentin AMBROZIC</div>
+                  <div class="bio">
+                    <p>Je m’appelle Quentin, j’ai 18 ans et je suis originaire de Saint Cyr au Mont d’Or, dans la périphérie de l’agglomération lyonnaise.
+                    J’ai commencé à m'intéresser à l’informatique il y à 3 ans quand j’ai choisi les composants et construit mon PC fixe seul pour noël 2021. J’ai pu acquérir des connaissances en hardware. Suite à ça je me suis intéressé à la partie software en 2022 j’ai commencé à apprendre des bases de python de manière autodidacte . 
+                    J’ai pris connaissance de la cybersécurité cette même année lors d’une porte ouverte à Eurexpo pour avoir une idée de carrière vers laquelle je voudrais me diriger . Depuis je me suis inscrit et été admis à Guardia Cybersecurity School. Grâce à cette école j’ai pus accumulé des connaissances avec les différents intervenants.
+                    Ceci est un petit apperçu de ce que j’ai pus apprendre au cours du Bachelor que j’ai passé dans cette école: 
+                    J’ai pus obtenir des connaissances approfondies sur du DevSecOps ,pentest ,SIR ,OSINT...
+                    </p>
+                  </div>
+                  <div class="buttons">
+                    <a href="https://www.instagram.com//qntn.amb" class="button" target="_blank">
+                      <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://www.linkedin.com/in/quentin-ambrozic-728301301/" class="button" target="_blank">
+                      <i class="fab fa-linkedin"></i> linkedin
+                    </a>
+                    <a href="https://github.com/AmbrozicQuentin" class="button" target="_blank">
+                      <i class="fab fa-github"></i> GitHub
+                    </a>
+                  </div>
+                </div>
+              </div>
           <div class="carousel-item" alt="Slide 3">
             <div class="bd-mrwn">
 
@@ -130,6 +132,9 @@
               </a>
               <a href="https://www.linkedin.com/in/quentin-ambrozic-728301301/" class="button" target="_blank">
                 <i class="fab fa-linkedin"></i> linkedin
+              </a>
+              <a href="https://github.com/AmbrozicQuentin" class="button" target="_blank">
+                <i class="fab fa-github"></i> GitHub
               </a>
               </div>
               </div>
@@ -215,7 +220,7 @@
       </div>
     </div>
   </div>
-  
   </div>
+</div>
 </body>
 </html>

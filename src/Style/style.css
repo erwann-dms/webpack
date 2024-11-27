@@ -7,6 +7,8 @@
   --header2-gradient: linear-gradient(to right, #00eeff, #0026ff);
   --background-pic: url('../photos/background.png');
   --background-gradient: linear-gradient(128deg, #000000 0%, #020041 50%, #002B34 100%);
+  --bio-background: #3f4041;
+  --text-color-bio: white;
 }
 
 .light-toggle{
@@ -18,17 +20,20 @@
   --header2-gradient: linear-gradient(to right, #00eeff, #0026ff);
   --background-pic: url('../photos/background..png');
   --background-gradient: linear-gradient(128deg, #ffffff 0%, #aceeff 100%, #93edff 100%);
+  --bio-background: #9fa0a1;
+  --text-color-bio: white;
 }
 
-html{
-  height: 100%;
+html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: var(--background-main);
+  font-family: Arial, sans-serif; 
+  margin: 0; 
   background: var(--background-gradient);
+  background-size: cover; 
+  background-position: center; 
   color: var(--text-color);
 }
 
@@ -501,8 +506,8 @@ nav.scrolled {
   }
 
   .big-div {
-    width: 97%;
-    height: 97%;
+    width: auto;
+    height: auto;
     background-color: var(--background-button);
     border-radius: 12px;
     overflow: hidden;
@@ -512,6 +517,12 @@ nav.scrolled {
     text-decoration: none;
     color: inherit;
     box-shadow: 5px 2.5px 2.5px var(--text-color);
+    align-self: center;
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
   }
 
   .carousel {
@@ -565,7 +576,7 @@ nav.scrolled {
 }
 
 .carousel-button:disabled {
-    opacity: 0.5;
+    opacity: 0;
     cursor: not-allowed;
 }
 
@@ -703,8 +714,8 @@ nav.scrolled {
 .bio {
   margin-top: 20px;
   font-size: 20px;
-  color: white;
-  background-color: black;
+  color: var(--text-color-bio);
+  background-color: var(--bio-background);
   padding: 30px;
   width: 80%;
   max-width: 800px;
@@ -779,3 +790,61 @@ nav.scrolled {
   animation-delay: -3s;
 }
 
+
+.bd-qt {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-gradient);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.bio-qt {
+  margin-top: 20px;
+  font-size: 20px;
+  color: var(--text-color-bio);
+  background-color: var(--bio-background);
+  padding: 30px;
+  width: 80%;
+  max-width: 1100px;
+  border-radius: 10px;
+}
+
+.megadiv{
+  height: 100%;
+  width: 100%;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  transform: rotateX(30deg) rotateY(30deg);
+  transform-style: preserve-3d;
+  animation: rotate 5s infinite linear;
+}
+
+.logo rect, .logo circle, .logo path {
+  transition: all 0.3s ease;
+}
+
+@keyframes rotate {
+  0% {
+      transform: rotateX(30deg) rotateY(30deg);
+  }
+  100% {
+      transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+.video {
+  width: auto;
+  height: auto;
+}
