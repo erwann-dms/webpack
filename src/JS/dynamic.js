@@ -27,7 +27,7 @@ function setLightmode(param) {
         setCookie("lightmode", "true", 15);
        } else {
         element.classList.remove("light-toggle");
-        setCookie("lightmode", "true", 15);
+        document.cookie = "lightmode=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
        }
         
 } 
