@@ -41,7 +41,7 @@
       <div class="container-Team">
         <h2 class="container" id="team">Nos compétences</h2>
         <br>
-        <br><p>dsds<p>
+        <br><p>Voici nos compétences en langages de programmations<p>
       </div>
   </div>
 
