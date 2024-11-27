@@ -12,7 +12,7 @@
 <body>
   <nav>
     <div class="nav">
-      <img src="photos/logo2.png" alt="logo" style="width: 70px; height: 70px; margin-bottom: 20px;">
+      <img src="/photos/logo2.png" alt="logo" style="width: 70px; height: 70px; margin-bottom: 20px;">
       <a class="nav-link" href="#team"><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">Team</button></a>
       <a class="nav-link" href="#python"><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">Python</button></a>
       <a class="nav-link" href="#java"><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">Java</button></a>
@@ -29,7 +29,7 @@
 
   <div class="bigdiv">
   <div class="f-container">
-    <a href="team/index.html" style="color: inherit;text-decoration: none;">
+    <a href="/team" style="color: inherit;text-decoration: none;">
       <div class="container-Team">
         <h2 class="container" id="team">Team</h2>
         <p>Présentation de la Team: La team se compose de 4 personnes Merwan.C ,Quentin.A ,Paul.B ,Erwann.D . Nous sommes une équipe de développeurs fullstack très polyvalente. Nous avons des connaissances dans de multiples langages de programmation ainsi que des connaissances en DevSecOps ,Pentest ,SIR ,OSINT .Nous proposons nos services autant aux entreprises qu’aux particuliers.</p>
@@ -45,7 +45,7 @@
   </div>
 
   <div class="grosse-flex">
-    <a href="languages/python/index.html" class="flex-container">
+    <a href="/languages/python" class="flex-container">
       <div class="container-Python">
         <h2 class="container" id="python">Python</h2>
         <video loop autoplay muted class="video"><source src="photos/python.mp4" type="video/mp4"/></video>      
@@ -55,7 +55,7 @@
       </div>
     </a>
   
-    <a href="languages/java/index.html" class="flex-container">
+    <a href="./languages/java" class="flex-container">
       <div class="container-Java">
         <h2 class="container" id="java">Java</h2>
         <video loop autoplay muted class="video"><source src="photos/Java.mp4" type="video/mp4"/></video>
@@ -65,7 +65,7 @@
       </div>
     </a>
 
-    <a href="languages/javascript/index.html" class="flex-container">
+    <a href="./languages/javascript/" class="flex-container">
       <div class="container-JS">
         <h2 class="container" id="js">JS</h2>
         <video loop autoplay muted class="video"><source src="photos/js.mp4" type="video/mp4"/></video>
@@ -77,7 +77,7 @@
 
     
 
-    <a href="languages/PHP/index.html" class="flex-container">
+    <a href="./languages/PHP" class="flex-container">
       <div class="container-PHP">
         <h2 class="container" id="php">PHP</h2>
         <video loop autoplay muted class="video"><source src="photos/php.mp4" type="video/mp4"/></video>
@@ -88,6 +88,8 @@
     </a>
   </div>
 </div>
+
+<a href="/partenaires">BOUTON TEMPORAIRE POUR MERWAN (PAS TOUCHER MTN MAIS VIRER PLUS TARD)</a>
 
 </body>
 </html>
