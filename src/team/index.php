@@ -2,10 +2,10 @@
 <html lang="fr" class="html">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="../Style/style.css">
-  <script type="text/javascript" src="../JS/dynamic.js" defer></script>   
+  <link rel="stylesheet" type="text/css" href="/Style/style.css">
+  <script type="text/javascript" src="/JS/dynamic.js" defer></script>   
   <title>Notre Team</title>
-  <link rel="shortcut icon" href="../photos/logo1.png">
+  <link rel="shortcut icon" href="/photos/logo1.png">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,12 +13,12 @@
 <body class="body">
   <nav>
     <div class="nav">
-      <a class="nav-link" nav-link href="../index.html"><img src="../photos/logo2.png" alt="logo" style="width: 70px; height: 70px; margin-bottom: 20px;"></a>
-      <a class="nav-link" href="../index.html"><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">Team</button></a>
-      <a class="nav-link" href="../index.html"><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">Python</button></a>
-      <a class="nav-link" href="../index.html"><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">Java</button></a>
-      <a class="nav-link" href="../index.html"><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">JS</button></a>
-      <a class="nav-link" href="../index.html"><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">PHP</button></a>
+      <a class="nav-link" nav-link href="/."><img src="/photos/logo2.png" alt="logo" style="width: 70px; height: 70px; margin-bottom: 20px;"></a>
+      <a class="nav-link" href="/."><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">Team</button></a>
+      <a class="nav-link" href="/."><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">Python</button></a>
+      <a class="nav-link" href="/."><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">Java</button></a>
+      <a class="nav-link" href="/."><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">JS</button></a>
+      <a class="nav-link" href="/."><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">PHP</button></a>
       <div class="nightmode-toggle">
         <label class="switch-label">
           <input type="checkbox" class="checkbox" id="lightmode" onchange="checklightmode()">
