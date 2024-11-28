@@ -166,14 +166,14 @@
 
         .snowflake {
             position: absolute;
-            top: -10px;
-            font-size: 1.5em;
+            font-size: 1em; /* Flocons de taille moyenne */
             color: white;
             opacity: 0.8;
-            animation: snow 10s linear infinite;
+            animation: snow 8s linear infinite;
             pointer-events: none; /* Les flocons ne devraient pas interférer avec les autres éléments */
         }
 
+        /* Animation des flocons de neige */
         @keyframes snow {
             0% {
                 transform: translateX(0) translateY(0);
@@ -227,6 +227,5 @@
         for (let i = 0; i < 50; i++) {
             const snowflake = document.createElement('span');
             snowflake.classList.add('snowflake');
-            snowflake.style.left = Math.random() * 100 + 'vw';  // Position aléatoire en X
-            snowflake.style.animationDuration = (Math.random() * 5 + 5) + 's';  // Durée aléatoire de la chute
-           
+            
+            // Générer une taille aléatoire entre petit (0.
