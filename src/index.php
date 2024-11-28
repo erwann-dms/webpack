@@ -27,7 +27,7 @@
             <span class="slider"></span>
           </label>
       </div>
-      <a class="nav-link" href="/login"><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">Login</button></a>
+      <a class="nav-link" href="/login/index.php"><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">Login</button></a>
     </div>
   </nav>
 
@@ -70,7 +70,7 @@
       </div>
     </a>
 
-    <a href="./languages/javascript/" class="flex-container">
+    <a href="./languages/javascript" class="flex-container">
       <div class="container-JS">
         <h2 class="container" id="js">JS</h2>
         <video loop autoplay muted><source src="photos/js.mp4" type="video/mp4"/></video>
