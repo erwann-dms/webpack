@@ -6,72 +6,62 @@
     <link rel="stylesheet" href="/Style/style.css">
     <title>Nos Partenaires Développeurs</title>
 </head>
-<body class="body_partenaire">
-
+<body class="body">
+<?php include $_SERVER['DOCUMENT_ROOT'] . "./common/navbar.php";?>
     <div>
         <header class="header_partenaire">
             <h1 class="typing_partenaire">Nos Partenaires Développeurs</h1>
         </header>
 
-        <div class="slider-container_partenaire">
-            <div class="slider_partenaire">
-            
-                <div class="slide_partenaire">
-                    <img src="/photos/Jean.jpg" alt="Partenaire 1">
-                    <h2>Marie Palois</h2>
-                    <p>Google.</p>
-                </div>
-               
-                <div class="slide_partenaire">
-                    <img src="/photos/Sophie.jpg" alt="Partenaire 2">
-                    <h2>Sophie Carter</h2>
-                    <p>Amazon.</p>
-                </div>
-             
-                <div class="slide_partenaire">
-                    <img src="/photos/Marc.jpg" alt="Partenaire 3">
-                    <h2>Marc Gassy</h2>
-                    <p>Entrepreneur s'etant developper dans la vente d'equipement hardware.</p>
-                </div>
-            </div>
 
-            
-            <div class="nav-buttons_partenaire">
-                <button class="prev_partenaire" onclick="prevSlide()">&#10094;</button>
-                <button class="next_partenaire" onclick="nextSlide()">&#10095;</button>
+<div class="mega-div">
+  <div class="big-div">
+    <div class="carousel">
+      <button class="carousel-button left" id="prevBtn">◀</button>
+      <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-item" alt="Slide 1">
+            <div class="bd-mrwn">
+              <div class="name">Marie Palois</div>
+              <div class="photo-container"><img src="../photos/Jean.jpg" alt=""></div>
+              <div class="bio">
+              <p>Google</p>
+              </div>
+              </div>
+          </div>
+          <div class="carousel-item" alt="Slide 2">
+            <div class="bd-mrwn">
+              <div class="photo-container"><img src="../photos/Sophie.jpg" alt=""></div>
+                <div class="name">Sophie Carter</div>
+                  <div class="bio">
+                    <p>Amazon </p>
+                  </div>
+                </div>
+              </div>
+          <div class="carousel-item" alt="Slide 3">
+            <div class="bd-mrwn">
+              <div class="photo-container">
+                  <img src="../photos/Marc.jpg" alt="ma photo">
+              </div>
+              <div class="name">
+              Marc Gassy
+              </div>
+              <div class="bio">
+                  <p>Entrepreneur s'etant developper dans la vente d'equipement hardware.</p>
+              </div>
             </div>
+            </div>
+          </div>
         </div>
+        <button class="carousel-button right" id="nextBtn">▶</button>
+      </div>
+    </div>
+  </div>
+</div>
 
         <footer class="footer_partenaire">
             <p class="footer_p_partenaire">&copy; 2024 Tous droits réservés</p>
         </footer>
-    </div>
 
-    <script>
-        let currentSlide = 0;
 
-        function showSlide(index) {
-            const slides = document.querySelectorAll('.slide');
-            const totalSlides = slides.length;
-            if (index >= totalSlides) {
-                currentSlide = 0;
-            } else if (index < 0) {
-                currentSlide = totalSlides - 1;
-            } else {
-                currentSlide = index;
-            }
-
-            const slider = document.querySelector('.slider');
-            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-        }
-
-        function nextSlide() {
-            showSlide(currentSlide + 1);
-        }
-
-        function prevSlide() {
-            showSlide(currentSlide - 1);
-        }
-    </script>
 </body>
 </html>
