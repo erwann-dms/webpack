@@ -53,7 +53,7 @@
   <a href="/languages/python" class="flex-container">
     <div class="container-Python">
       <h2 class="container" id="python">Python</h2>
-      <img src="<?php echo $lightmode == 'true' ? '../photos/gif/python clair.gif' : '../photos/gif/python sombre.gif'; ?>" alt="Python GIF" class="python-gif">      
+      <img src="<?php echo $lightmode == 'true' ? '../photos/gif/python_clair.gif' : '../photos/gif/python_sombre.gif'; ?>" alt="Python GIF" class="python-gif">      
       <p>Python est un langage de programmation polyvalent...</p>
       <br>
       <p>Nous avons pu faire l’expérience de pratiquer un projet avec Python en DevSecOps.</p>
@@ -63,7 +63,7 @@
   <a href="./languages/java" class="flex-container">
     <div class="container-Java">
       <h2 class="container" id="java">Java</h2>
-      <img src="<?php echo $lightmode == 'true' ? '../photos/gif/Java clair.gif' : '../photos/gif/Java sombre.gif'; ?>" alt="Java GIF" class="java-gif">
+      <img src="<?php echo $lightmode == 'true' ? '../photos/gif/Java_clair.gif' : '../photos/gif/Java_sombre.gif'; ?>" alt="Java GIF" class="java-gif">
       <p>Java est un langage de programmation orienté objet...</p> 
       <br>
       <p>Nous avons pu pratiquer du Java en codant des jeux...</p>
@@ -73,7 +73,7 @@
   <a href="./languages/javascript" class="flex-container">
     <div class="container-JS">
       <h2 class="container" id="js">JS</h2>
-      <img src="<?php echo $lightmode == 'true' ? '../photos/gif/js clair.gif' : '../photos/gif/js sombre.gif'; ?>" alt="JS GIF" class="js-gif">
+      <img src="<?php echo $lightmode == 'true' ? '../photos/gif/js_clair.gif' : '../photos/gif/js_sombre.gif'; ?>" alt="JS GIF" class="js-gif">
       <p>JavaScript est un langage de programmation léger...</p>
       <br>
       <p>Nous avons pu l’utiliser lors de création de sites...</p>
@@ -83,7 +83,7 @@
   <a href="./languages/PHP" class="flex-container">
     <div class="container-PHP">
       <h2 class="container" id="php">PHP</h2>
-      <img src="<?php echo $lightmode == 'true' ? '../photos/gif/php clair.gif' : '../photos/gif/php sombre.gif'; ?>" alt="PHP GIF" class="php-gif">
+      <img src="<?php echo $lightmode == 'true' ? '../photos/gif/php_clair.gif' : '../photos/gif/php_sombre.gif'; ?>" alt="PHP GIF" class="php-gif">
       <p>PHP (Hypertext Preprocessor) est un langage...</p>
       <br>
       <p>Nous avons pu mettre en pratique des connaissances de PHP...</p>
