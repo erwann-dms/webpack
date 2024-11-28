@@ -229,4 +229,11 @@
             snowflake.classList.add('snowflake');
             
             // Générer une taille aléatoire entre petit (0.8em) et moyen (1.5em)
-            const size = Math.random() * 0.7 + 0.8; // taille entre
+            const size = Math.random() * 0.7 + 0.8; // taille entre 0.8em et 1.5em
+            snowflake.style.fontSize = `${size}em`;
+
+            // Placer chaque flocon à une position aléatoire
+            const leftPosition = Math.random() * 100; // Entre 0 et 100% de la largeur
+            snowflake.style.left = `${leftPosition}vw`;
+
+            // Ajouter le flocon au conteneur
