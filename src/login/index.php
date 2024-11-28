@@ -44,9 +44,6 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             opacity: 0;
             animation: fadeIn 1s forwards;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end; /* Aligner les éléments à droite */
         }
 
         /* Animation de fondu en entrée */
@@ -62,7 +59,6 @@
             font-size: 24px;
             letter-spacing: 1px;
             text-transform: uppercase;
-            align-self: flex-start; /* Aligner le titre à gauche */
         }
 
         /* Conteneur du formulaire avec flexbox pour les champs */
@@ -70,7 +66,7 @@
             width: 100%;
             display: flex;
             flex-direction: column;
-            align-items: flex-end; /* Aligner les champs à droite */
+            align-items: center; /* Centrer les éléments à l'intérieur du formulaire */
         }
 
         /* Champs de saisie avec animation au focus */
@@ -96,7 +92,7 @@
         /* Bouton de soumission avec effet au survol */
         input[type="submit"] {
             width: 100%;
-            max-width: 250px; /* Ajuster la largeur du bouton */
+            max-width: 250px; /* Ajuster la largeur du bouton pour qu'il corresponde aux champs */
             padding: 14px;
             background-color: var(--background-button);
             border: none;
@@ -125,7 +121,6 @@
         .small-text {
             margin-top: 15px;
             font-size: 14px;
-            align-self: flex-start; /* Aligner ce texte à gauche */
         }
 
         .small-text a {
