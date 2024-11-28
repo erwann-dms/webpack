@@ -44,6 +44,9 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             opacity: 0;
             animation: fadeIn 1s forwards;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* Aligner les éléments à droite */
         }
 
         /* Animation de fondu en entrée */
@@ -59,11 +62,21 @@
             font-size: 24px;
             letter-spacing: 1px;
             text-transform: uppercase;
+            align-self: flex-start; /* Aligner le titre à gauche */
+        }
+
+        /* Conteneur du formulaire avec flexbox pour les champs */
+        form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* Aligner les champs à droite */
         }
 
         /* Champs de saisie avec animation au focus */
         input[type="text"], input[type="password"] {
             width: 100%;
+            max-width: 250px; /* Réduire la largeur des champs */
             padding: 12px;
             margin: 10px 0;
             background-color: var(--background-button);
@@ -83,6 +96,7 @@
         /* Bouton de soumission avec effet au survol */
         input[type="submit"] {
             width: 100%;
+            max-width: 250px; /* Ajuster la largeur du bouton */
             padding: 14px;
             background-color: var(--background-button);
             border: none;
@@ -91,6 +105,7 @@
             font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-top: 10px; /* Ajouter un peu d'espace au-dessus du bouton */
         }
 
         /* Effet de survol pour le bouton */
@@ -110,6 +125,7 @@
         .small-text {
             margin-top: 15px;
             font-size: 14px;
+            align-self: flex-start; /* Aligner ce texte à gauche */
         }
 
         .small-text a {
