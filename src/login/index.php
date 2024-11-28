@@ -166,7 +166,7 @@
 
         .snowflake {
             position: absolute;
-            font-size: 1em; /* Flocons de taille moyenne */
+            font-size: 1.5em; /* Flocons de taille moyenne */
             color: white;
             opacity: 0.8;
             animation: snow 8s linear infinite;
@@ -228,4 +228,5 @@
             const snowflake = document.createElement('span');
             snowflake.classList.add('snowflake');
             
-            // Générer une taille aléatoire entre petit (0.
+            // Générer une taille aléatoire entre petit (0.8em) et moyen (1.5em)
+            const size = Math.random() * 0.7 + 0.8; // taille entre
