@@ -104,8 +104,9 @@
           </div>
           <div class="carousel-item" alt="Slide 4">
             <div class="bd-mrwn">
-            
-              <div class="photo-container"><p style="color: blue;">🪶></p></div>
+              <div class="photo-container">
+              <img src="../photos/Paul.jpg" alt="ma photo">
+              </div>
               <div class="name">Paul BURGNIARD</div>
               <div class="bio">
               <p>

@@ -13,6 +13,7 @@
   --Java-gif: url('../photos/gif/Java_sombre.gif');
   --js-gif: url('../photos/gif/js_sombre.gif');
   --php-gif: url('../photos/gif/php_sombre.gif');
+  --team-gif: url('../photos/gif/team_sombre.gif')
 }
 
 .light-toggle {
@@ -30,6 +31,7 @@
   --Java-gif: url('../photos/gif/Java_clair.gif');
   --js-gif: url('../photos/gif/js_clair.gif');
   --php-gif: url('../photos/gif/php_clair.gif');
+  --team-gif: url('../photos/gif/team_clair.gif')
 }
 
 html {
@@ -886,6 +888,10 @@ img {
 
 .php-gif {
   content: var(--php-gif);
+}
+
+.team-gif {
+  content: var(--team-gif);
 }
 
 
