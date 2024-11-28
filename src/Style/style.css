@@ -857,27 +857,23 @@ video {
   height: 100px;
 }
 
-span {
-  display: inline-block;
-  width: 300px;
+img {
+  width: 300px; 
   height: 200px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .python-gif {
-  background-image: var(--python-gif);
+  content: var(--python-gif);
 }
 
 .java-gif {
-  background-image: var(--Java-gif);
+  content: var(--Java-gif);
 }
 
 .js-gif {
-  background-image: var(--js-gif);
+  content: var(--js-gif);
 }
 
 .php-gif {
-  background-image: var(--php-gif);
+  content: var(--php-gif);
 }
