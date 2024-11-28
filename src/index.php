@@ -41,7 +41,7 @@
       </a>
     </div>
 
-    <div class="f-container2"> 
+    <div class="f-container2">
       <div class="container-Team">
         <h2 class="container" id="team">Nos compétences</h2>
         <br>
