@@ -11,7 +11,7 @@
       <a class="nav-link" href="/#php"><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">PHP</button></a>
       <div class="nightmode-toggle">
           <label class="switch-label">
-            <input type="checkbox" class="checkbox" id="lightmode" onchange="checklightmode()" <?php echo ($lightmode == 'true') ? 'checked' : ''; ?>>
+            <input type="checkbox" class="checkbox" id="lightmode" onchange="checkLightmodeBox()" <?php echo ($lightmode == 'true') ? 'checked' : ''; ?>>
             <span class="slider"></span>
           </label>
       </div>

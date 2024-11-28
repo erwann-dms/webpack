@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
-    <!-- Lien vers le fichier CSS externe -->
     <link rel="stylesheet" href="/Style/style.css">
+    <link rel="shortcut icon" href="/photos/logo1.png" type="image/x-icon">
+    <script src="/JS/dynamic.js"></script>
 </head>
 <body class="body-background">
 
