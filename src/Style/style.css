@@ -894,21 +894,16 @@ img {
   content: var(--team-gif);
 }
 
-
-
-
-/* Conteneur du formulaire avec flexbox pour les champs */
 .form {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centrer les éléments à l'intérieur du formulaire */
+  align-items: center; 
 }
 
-/* Champs de saisie avec animation au focus */
 .input {
   width: 100%;
-  max-width: 250px; /* Réduire la largeur des champs */
+  max-width: 250px; 
   padding: 12px;
   margin: 10px 0;
   background-color: var(--background-button);
@@ -919,16 +914,14 @@ img {
   transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Animation au focus sur les champs de saisie */
 .input:focus {
   border-color: var(--highlight-gradient);
   transform: scale(1.05);
 }
 
-/* Bouton de soumission avec effet au survol */
 .submit-button {
   width: 100%;
-  max-width: 250px; /* Ajuster la largeur du bouton pour qu'il corresponde aux champs */
+  max-width: 250px; 
   padding: 14px;
   background-color: var(--background-button);
   border: none;
@@ -937,23 +930,20 @@ img {
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  margin-top: 10px; /* Ajouter un peu d'espace au-dessus du bouton */
+  margin-top: 10px;
 }
 
-/* Effet de survol pour le bouton */
 .submit-button:hover {
   background-color: var(--highlight-gradient);
   transform: translateY(-3px);
 }
 
-/* Message d'erreur en couleur rouge si les identifiants sont incorrects */
 .error {
   color: var(--text-color-bio);
   margin-top: 10px;
   font-size: 14px;
 }
 
-/* Petit texte sous le formulaire pour les utilisateurs déjà inscrits */
 .small-text {
   margin-top: 15px;
   font-size: 14px;
@@ -968,7 +958,6 @@ img {
   text-decoration: underline;
 }
 
-/* Bouton "Retour" pour revenir à la page précédente */
 .back-button {
   margin-top: 20px;
   padding: 10px 20px;
@@ -981,31 +970,29 @@ img {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Effet de survol pour le bouton "Retour" */
 .back-button:hover {
   background-color: var(--highlight-gradient);
   transform: translateY(-3px);
 }
 
-/* Neige en arrière-plan */
 .snowflakes {
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  pointer-events: none; /* Pour que les flocons n'interfèrent pas avec les autres éléments */
+  pointer-events: none;
   z-index: 9999;
   overflow: hidden;
 }
 
 .snowflake {
   position: absolute;
-  font-size: 1.5em; /* Flocons de taille moyenne */
+  font-size: 1.5em;
   color: white;
   opacity: 0.8;
   animation: snow 8s linear infinite;
-  pointer-events: none; /* Les flocons ne devraient pas interférer avec les autres éléments */
+  pointer-events: none; 
 }
 
 .header_partenaire {
@@ -1027,7 +1014,6 @@ img {
   animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite, hideCursor 0.5s 4s forwards;
 }
 
-
 @keyframes typing {
   from {
     width: 0;
@@ -1038,13 +1024,11 @@ img {
   }
 }
 
-
 @keyframes blink {
   50% {
     border-color: transparent;
   }
 }
-
 
 @keyframes hideCursor {
   to {
