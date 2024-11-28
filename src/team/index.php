@@ -11,22 +11,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="body">
-  <nav>
-    <div class="nav">
-      <a class="nav-link" nav-link href="/."><img src="/photos/logo2.png" alt="logo" style="width: 70px; height: 70px; margin-bottom: 20px;"></a>
-      <a class="nav-link" href="/."><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">Team</button></a>
-      <a class="nav-link" href="/."><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">Python</button></a>
-      <a class="nav-link" href="/."><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">Java</button></a>
-      <a class="nav-link" href="/."><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">JS</button></a>
-      <a class="nav-link" href="/."><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">PHP</button></a>
-      <div class="nightmode-toggle">
-        <label class="switch-label">
-          <input type="checkbox" class="checkbox" id="lightmode" onchange="checklightmode()">
-          <span class="slider"></span>
-        </label>
-      </div>
-    </div>
-  </nav>
+    <!-- Pour Changer la navbar changer dans /common/navbar.php -->
+    <?php include $_SERVER['DOCUMENT_ROOT'] . "./common/navbar.php";?>
 
   <div class="mega-div">
   <div class="big-div">
