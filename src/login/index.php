@@ -153,13 +153,25 @@
         }
 
         /* Neige en arrière-plan */
+        .snowflakes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none; /* Pour que les flocons n'interfèrent pas avec les autres éléments */
+            z-index: 9999;
+            overflow: hidden;
+        }
+
         .snowflake {
             position: absolute;
             top: -10px;
-            z-index: 9999;
-            color: white;
             font-size: 1.5em;
+            color: white;
+            opacity: 0.8;
             animation: snow 10s linear infinite;
+            pointer-events: none; /* Les flocons ne devraient pas interférer avec les autres éléments */
         }
 
         @keyframes snow {
@@ -167,7 +179,7 @@
                 transform: translateX(0) translateY(0);
             }
             100% {
-                transform: translateX(-100px) translateY(100vh);
+                transform: translateX(calc(-50px + 50vw)) translateY(100vh);
             }
         }
     </style>
@@ -176,14 +188,7 @@
 
     <!-- Neige en fond -->
     <div class="snowflakes" aria-hidden="true">
-        <span class="snowflake">❄</span>
-        <span class="snowflake">❄</span>
-        <span class="snowflake">❄</span>
-        <span class="snowflake">❄</span>
-        <span class="snowflake">❄</span>
-        <span class="snowflake">❄</span>
-        <span class="snowflake">❄</span>
-        <span class="snowflake">❄</span>
+        <!-- Flocons générés dynamiquement par JavaScript -->
     </div>
 
     <div class="login-container">
@@ -216,16 +221,12 @@
 
     <script>
         // Générer des flocons de neige animés à intervalle régulier
-        const snowflakes = document.querySelector('.snowflakes');
+        const snowflakesContainer = document.querySelector('.snowflakes');
 
-        for (let i = 0; i < 30; i++) {
+        // Créer 50 flocons de neige
+        for (let i = 0; i < 50; i++) {
             const snowflake = document.createElement('span');
             snowflake.classList.add('snowflake');
             snowflake.style.left = Math.random() * 100 + 'vw';  // Position aléatoire en X
             snowflake.style.animationDuration = (Math.random() * 5 + 5) + 's';  // Durée aléatoire de la chute
-            snowflakes.appendChild(snowflake);
-        }
-    </script>
-
-</body>
-</html>
+           
