@@ -11,22 +11,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="body">
-  <nav>
-    <div class="nav">
-      <a class="nav-link" nav-link href="/."><img src="/photos/logo2.png" alt="logo" style="width: 70px; height: 70px; margin-bottom: 20px;"></a>
-      <a class="nav-link" href="/."><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">Team</button></a>
-      <a class="nav-link" href="/."><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">Python</button></a>
-      <a class="nav-link" href="/."><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">Java</button></a>
-      <a class="nav-link" href="/."><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">JS</button></a>
-      <a class="nav-link" href="/."><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">PHP</button></a>
-      <div class="nightmode-toggle">
-        <label class="switch-label">
-          <input type="checkbox" class="checkbox" id="lightmode" onchange="checklightmode()">
-          <span class="slider"></span>
-        </label>
-      </div>
-    </div>
-  </nav>
+    
+    <?php include $_SERVER['DOCUMENT_ROOT'] . "./common/navbar.php";?>
 
   <div class="mega-div">
   <div class="big-div">
@@ -38,6 +24,7 @@
             
               <div class="photo-container" style="border: none; overflow: visible;"><img src="../photos/logo1.png"></div>
               <div class="name">CodeTricks</div>
+              <img src="<?php echo $lightmode == 'true' ? '../photos/gif/team_clair.gif' : '../photos/gif/team_sombre.gif'; ?>" alt="Python GIF" class="team-gif" style="height:auto;width:auto">
               <div class="bio">
               <p>Voici notre equipe CodeTricks ! 
               </p>
@@ -118,8 +105,9 @@
           </div>
           <div class="carousel-item" alt="Slide 4">
             <div class="bd-mrwn">
-            
-              <div class="photo-container"><p style="color: blue;">🪶></p></div>
+              <div class="photo-container">
+              <img src="../photos/Paul.jpg" alt="ma photo">
+              </div>
               <div class="name">Paul BURGNIARD</div>
               <div class="bio">
               <p>

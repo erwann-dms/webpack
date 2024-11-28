@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   php-apache:
-    image: websitetest
+    image: ghcr.io/erwann-dms/groupe5webdev:latest
     container_name: "php-apache"
     ports:
       - "8000:80"
