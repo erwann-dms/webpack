@@ -13,12 +13,12 @@
   
     <div class="bd-qt">
     
-      <div class="name">Python</div><div class="bio-qt">
+      <div class="name">Java</div><div class="bio-qt">
       <p> Java est un langage de programmation orienté objet, créé par Sun Microsystems en 1995 et désormais géré par Oracle. Il est reconnu pour sa portabilité, sa robustesse et sa capacité à créer des applications multiplateformes. Nous avons pu pratiquer du Java en codant des jeux en tant que projets indépendants. </p>
       <br>
       <p>Nous avons pu faire l’expérience de pratiquer un projet avec Java en codant des jeux en tant que projets indépendants.  
        
-       <br> Nous avonspus déveloper differentes Compétences tels que: 
+       <br> Nous avons pu déveloper differentes Compétences tels que: 
         <br>– Développement d’applications complexes : logiciels d’entreprise et systèmes distribués (ex. JEE, Spring).
         <br>
         <br>– Programmation orientée objet avancée : gestion des interfaces, héritage, polymorphisme et encapsulation.
