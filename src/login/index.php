@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
     <!-- Lien vers le fichier CSS externe -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/Style/style.css">
 </head>
 <body class="body-background">
 
