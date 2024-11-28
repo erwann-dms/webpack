@@ -5,23 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
     <style>
-        /* Corps de la page avec un fond noir et du texte clair */
+        /* Définition des variables CSS pour personnaliser le design */
+        :root {
+            --background-button: #222;
+            --background-main: #111;
+            --nav-link-color: white;
+            --text-color: rgba(255, 255, 255, 0.658);
+            --highlight-gradient: linear-gradient(4deg, #00ffd5, #002bff, #00ffd5);
+            --header2-gradient: linear-gradient(to right, #00eeff, #0026ff);
+            --background-pic: url('../photos/background.png');
+            --background-gradient: linear-gradient(128deg, #000000 0%, #020041 50%, #002B34 100%);
+            --bio-background: #3f4041;
+            --text-color-bio: white;
+        }
+
+        /* Corps de la page avec un fond de dégradé défini par la variable */
         body {
             font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #fff;
+            background-color: var(--background-main);
+            color: var(--text-color);
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-image: linear-gradient(135deg, #1e90ff, #121212);
+            background-image: var(--background-gradient);
         }
 
-        /* Conteneur principal du formulaire de login */
+        /* Conteneur principal du formulaire de login avec un arrière-plan semi-transparent */
         .login-container {
-            background-color: #232323;
+            background-color: var(--bio-background);
             border-radius: 8px;
             padding: 40px;
             width: 100%;
@@ -40,29 +54,29 @@
         }
 
         h2 {
-            color: #1e90ff; /* Bleu moderne pour le titre */
+            color: var(--header2-gradient); /* Gradient pour le titre */
             margin-bottom: 20px;
             font-size: 24px;
             letter-spacing: 1px;
             text-transform: uppercase;
         }
 
-        /* Champs de saisie avec une légère animation au focus */
+        /* Champs de saisie avec animation au focus */
         input[type="text"], input[type="password"] {
             width: 100%;
             padding: 12px;
             margin: 10px 0;
-            background-color: #333;
-            border: 1px solid #444;
+            background-color: var(--background-button);
+            border: 1px solid var(--background-button);
             border-radius: 5px;
-            color: #fff;
+            color: var(--text-color);
             font-size: 16px;
             transition: border-color 0.3s ease, transform 0.3s ease;
         }
 
         /* Animation au focus sur les champs de saisie */
         input[type="text"]:focus, input[type="password"]:focus {
-            border-color: #1e90ff;
+            border-color: var(--highlight-gradient);
             transform: scale(1.05);
         }
 
@@ -70,10 +84,10 @@
         input[type="submit"] {
             width: 100%;
             padding: 14px;
-            background-color: #1e90ff;
+            background-color: var(--background-button);
             border: none;
             border-radius: 5px;
-            color: #fff;
+            color: var(--text-color);
             font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease;
@@ -81,13 +95,13 @@
 
         /* Effet de survol pour le bouton */
         input[type="submit"]:hover {
-            background-color: #1c75d6;
+            background-color: var(--highlight-gradient);
             transform: translateY(-3px);
         }
 
-        /* Message d'erreur en rouge si les identifiants sont incorrects */
+        /* Message d'erreur en couleur rouge si les identifiants sont incorrects */
         .error {
-            color: #ff4d4d;
+            color: var(--text-color-bio);
             margin-top: 10px;
             font-size: 14px;
         }
@@ -99,7 +113,7 @@
         }
 
         .small-text a {
-            color: #1e90ff;
+            color: var(--nav-link-color);
             text-decoration: none;
         }
 
