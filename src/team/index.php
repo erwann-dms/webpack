@@ -24,7 +24,7 @@
             
               <div class="photo-container" style="border: none; overflow: visible;"><img src="../photos/logo1.png"></div>
               <div class="name">CodeTricks</div>
-              <img src="<?php echo $lightmode == 'true' ? '../photos/gif/team_clair.gif' : '../photos/gif/team_sombre.gif'; ?>" alt="Python GIF" class="team-gif">
+              <img src="<?php echo $lightmode == 'true' ? '../photos/gif/team_clair.gif' : '../photos/gif/team_sombre.gif'; ?>" alt="Python GIF" class="team-gif" style="height:auto;width:auto">
               <div class="bio">
               <p>Voici notre equipe CodeTricks ! 
               </p>

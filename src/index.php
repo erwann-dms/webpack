@@ -29,6 +29,8 @@
         <h2 class="container" id="team">Nos compétences</h2>
         <br>
         <p>Voici les différents langages de programmations que nous maitrisons</p>
+        <br>
+        <p>(pour les plus importants)</p>
       </div>
     </div>
 
