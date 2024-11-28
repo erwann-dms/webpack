@@ -27,7 +27,7 @@
             <span class="slider"></span>
           </label>
       </div>
-      <a class="nav-link" href="/login"><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">Login</button></a>
+      <a class="nav-link" href="/login/index.php"><button class="button-nav" role="button" style="text-decoration: none; color: inherit;">Login</button></a>
     </div>
   </nav>
 
