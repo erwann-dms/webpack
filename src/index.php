@@ -10,8 +10,8 @@
 </head>
 
 <body>
-  
-   <?php include $_SERVER['DOCUMENT_ROOT'] . "./common/navbar.php";?>
+  <!-- Pour Changer la navbar changer dans /common/navbar.php -->
+  <?php include $_SERVER['DOCUMENT_ROOT'] . "./common/navbar.php";?>
 
   <div class="bigdiv">
   <div class="f-container">
