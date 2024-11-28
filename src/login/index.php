@@ -31,6 +31,7 @@
             align-items: center;
             height: 100vh;
             background-image: var(--background-gradient);
+            overflow: hidden; /* Pour ne pas afficher de scrollbar avec la neige */
         }
 
         /* Conteneur principal du formulaire de login avec un arrière-plan semi-transparent */
@@ -131,9 +132,59 @@
         .small-text a:hover {
             text-decoration: underline;
         }
+
+        /* Bouton "Retour" pour revenir à la page précédente */
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: var(--background-button);
+            border: none;
+            border-radius: 5px;
+            color: var(--text-color);
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Effet de survol pour le bouton "Retour" */
+        .back-button:hover {
+            background-color: var(--highlight-gradient);
+            transform: translateY(-3px);
+        }
+
+        /* Neige en arrière-plan */
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            z-index: 9999;
+            color: white;
+            font-size: 1.5em;
+            animation: snow 10s linear infinite;
+        }
+
+        @keyframes snow {
+            0% {
+                transform: translateX(0) translateY(0);
+            }
+            100% {
+                transform: translateX(-100px) translateY(100vh);
+            }
+        }
     </style>
 </head>
 <body>
+
+    <!-- Neige en fond -->
+    <div class="snowflakes" aria-hidden="true">
+        <span class="snowflake">❄</span>
+        <span class="snowflake">❄</span>
+        <span class="snowflake">❄</span>
+        <span class="snowflake">❄</span>
+        <span class="snowflake">❄</span>
+        <span class="snowflake">❄</span>
+        <span class="snowflake">❄</span>
+        <span class="snowflake">❄</span>
+    </div>
 
     <div class="login-container">
         <h2>Se Connecter</h2>
@@ -158,7 +209,23 @@
                 <p><a href="#">Mot de passe oublié ?</a></p>
             </div>
         </form>
+
+        <!-- Bouton "Retour" -->
+        <button class="back-button" onclick="window.history.back()">Retour</button>
     </div>
+
+    <script>
+        // Générer des flocons de neige animés à intervalle régulier
+        const snowflakes = document.querySelector('.snowflakes');
+
+        for (let i = 0; i < 30; i++) {
+            const snowflake = document.createElement('span');
+            snowflake.classList.add('snowflake');
+            snowflake.style.left = Math.random() * 100 + 'vw';  // Position aléatoire en X
+            snowflake.style.animationDuration = (Math.random() * 5 + 5) + 's';  // Durée aléatoire de la chute
+            snowflakes.appendChild(snowflake);
+        }
+    </script>
 
 </body>
 </html>
