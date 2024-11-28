@@ -15,19 +15,19 @@
 
         <div class="slider-container_partenaire">
             <div class="slider_partenaire">
-                <!-- Slide 1 -->
+            
                 <div class="slide_partenaire">
                     <img src="/photos/Jean.jpg" alt="Partenaire 1">
                     <h2>Marie Palois</h2>
                     <p>Google.</p>
                 </div>
-                <!-- Slide 2 -->
+               
                 <div class="slide_partenaire">
                     <img src="/photos/Sophie.jpg" alt="Partenaire 2">
                     <h2>Sophie Carter</h2>
                     <p>Amazon.</p>
                 </div>
-                <!-- Slide 3 -->
+             
                 <div class="slide_partenaire">
                     <img src="/photos/Marc.jpg" alt="Partenaire 3">
                     <h2>Marc Gassy</h2>
@@ -35,7 +35,7 @@
                 </div>
             </div>
 
-            <!-- Boutons de navigation -->
+            
             <div class="nav-buttons_partenaire">
                 <button class="prev_partenaire" onclick="prevSlide()">&#10094;</button>
                 <button class="next_partenaire" onclick="nextSlide()">&#10095;</button>

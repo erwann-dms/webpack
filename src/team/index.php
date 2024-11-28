@@ -11,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="body">
-    <!-- Pour Changer la navbar changer dans /common/navbar.php -->
+    
     <?php include $_SERVER['DOCUMENT_ROOT'] . "./common/navbar.php";?>
 
   <div class="mega-div">
