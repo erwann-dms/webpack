@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Style/style.css">
     <title>Nos Partenaires Développeurs</title>
 </head>
-<body>
+<body class="body_partenaire">
 
     <div>
-        <header>
+        <header class="header_partenaire">
             <h1 class="typing_partenaire">Nos Partenaires Développeurs</h1>
         </header>
 
@@ -41,8 +42,8 @@
             </div>
         </div>
 
-        <footer>
-            <p>&copy; 2024 Tous droits réservés</p>
+        <footer class="footer_partenaire">
+            <p class="footer_p_partenaire">&copy; 2024 Tous droits réservés</p>
         </footer>
     </div>
 

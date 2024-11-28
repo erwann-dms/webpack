@@ -1020,8 +1020,7 @@ img {
   transform: translateY(-50%);
 }
 
-.prev_partenaire,
-.next_partenaire {
+.prev_partenaire, .next_partenaire {
   background-color: rgba(0, 0, 0, 0.5);
   border: none;
   color: white;
@@ -1032,8 +1031,7 @@ img {
   transition: background-color 0.3s ease;
 }
 
-.prev_partenaire:hover,
-.next_partenaire:hover {
+.prev_partenaire:hover,.next_partenaire:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
