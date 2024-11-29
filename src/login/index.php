@@ -38,7 +38,7 @@
             </div>
         </form>
 
-        <button class="back-button" onclick=<a href="http://localhost:8000">Retour</a></button>
+        <a href="http://localhost:8000"><button class="back-button">Retour</button></a>
     </div>
 </body>
 </html>
