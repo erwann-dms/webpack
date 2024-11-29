@@ -1,3 +1,7 @@
+<?php
+    
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -19,7 +23,7 @@
         <h2 class="title">Se Connecter</h2>
 
         <!-- Formulaire de login -->
-        <form action="#" method="post" class="form">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="form">
             <!-- Champs de saisie pour le nom d'utilisateur -->
             <input type="text" name="username" placeholder="Nom d'utilisateur" class="input" required><br>
             
@@ -34,7 +38,7 @@
 
             <!-- Texte pour inscription ou lien pour mot de passe oublié -->
             <div class="small-text">
-                <p>Pas encore inscrit ? <a href="#" class="link">Créer un compte</a></p>
+                <p>Pas encore inscrit ? <a href="/signup" class="link">Créer un compte</a></p>
                 <p><a href="#" class="link">Mot de passe oublié ?</a></p>
             </div>
         </form>
@@ -64,5 +68,5 @@
             snowflakesContainer.appendChild(snowflake);
         }
     </script>
-</body>
+    </body>
 </html>
