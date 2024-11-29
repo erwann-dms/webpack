@@ -96,7 +96,7 @@
                   <a href="https://github.com/mrwn111" class="button" target="_blank">
                       <i class="fab fa-github"></i> GitHub
                   </a>
-                  <a href="votre-lien-vers-le-cv" class="button" target="_blank">
+                  <a href="/photos/cv.pdf" class="button" target="_blank" download>
                       <i class="fas fa-file-alt"></i> Mon CV
                   </a>
               </div>
