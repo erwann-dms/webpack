@@ -184,11 +184,13 @@ J’ai pu obtenir des connaissances approfondies sur du DevSecOps, Pentest, SIR,
               <div class="name">Erwann DUMAS</div>
               <div class="nickname">Shrekye</div>
               <div class="bio">
-                <p>Je m’appelle Erwann, j’ai 18 ans. Je suis passionné par l’informatique, 
-                  je me suis intéressé à la cybersécurité il y a 2 ans. J'ai pratiqué sur Root Me, TryHackMe et Hack The Box, 
-                  et réalisé divers projets durant ma première année de Bachelor en cybersécurité à Guardia. 
-                  Mon objectif est de faire carrière dans ce domaine et de contribuer à un monde plus sûr. 
-                  J'ai suivi divers MOOC et formations, notamment sur OWASP. Voici mes compétences :  
+                <p>
+
+Je m’appelle Erwann, j’ai 18 ans. Je suis passionné par l’informatique.
+Je me suis intéressé à la cybersécurité il y a 2 ans. J'ai pratiqué sur Root Me, TryHackMe et Hack The Box.
+Et réalisé divers projets durant ma première année de Bachelor en cybersécurité à Guardia.
+Mon objectif est de faire carrière dans ce domaine et de contribuer à un monde plus sûr.
+J'ai suivi divers MOOC et formations, notamment sur OWASP. Voici mes compétences : 
                   <br>
                   -Niveau Intermédiaire en Cryptanalyse, Stéganographie et Pentest, Programmation, Web
                   <br>
