@@ -63,6 +63,9 @@
             // Ajouter le flocon au conteneur
             snowflakesContainer.appendChild(snowflake);
         }
+   
+   
+   
     </script>
 </body>
 </html>
