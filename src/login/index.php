@@ -38,7 +38,7 @@
             </div>
         </form>
 
-        <button class="back-button" onclick="window.history.back()">Retour</button>
+        <button class="back-button" onclick=<a href="http://localhost:8000">Retour</a></button>
     </div>
 </body>
 </html>
