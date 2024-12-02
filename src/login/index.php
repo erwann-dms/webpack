@@ -1,8 +1,5 @@
 <?php
-$conn = new mysqli("mysql", "root",$_SERVER['MYSQL_ROOT_PASSWORD'],"Website");
-if ($conn->connect_error) {
-    die("connection failed :" . $conn->connect_error);
-}
+$conn = new PDO("mysql:host='mysql';dbname='Website'","root",$_SERVER["MYSQL_ROOT_PASSWORD"],);
 
 $name = $password = "";
 $nameErr = $passwordErr = "";
