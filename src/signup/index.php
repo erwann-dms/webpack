@@ -47,9 +47,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif (isPasswordCompromised($password)) {
         $error = "Ce mot de passe a été compromis. Veuillez en choisir un autre.";
     } else {
-        // Ici, ajouter la logique pour sauvegarder l'utilisateur
-        // Exemple : ajouter à la base de données
-        // header("Location: success.php");
+        $dsn = "mysql:host=localhost;port=8000;dbname=Website;charset=utf8mb4";
+        $dbPassword = getenv('MYSQL_ROOT_PASSWORD'); 
+        $dbUser = 'root';
+
+        try {
+            $pdo = new PDO($dsn, $dbUser, $dbPassword, [
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+            ]);
+
+            $stmt = $pdo->prepare("SELECT COUNT(*) FROM users WHERE login = :username");
+            $stmt->execute(['username' => $username]);
+            $userExists = $stmt->fetchColumn() > 0;
+
+            if ($userExists) {
+                $error = "Ce nom d'utilisateur est déjà utilisé. Veuillez en choisir un autre.";
+            } else {
+                $passwordHash = sha1($password);
+
+                $stmt = $pdo->prepare("INSERT INTO users (login, password_hash) VALUES (:username, :password_hash)");
+                $stmt->execute([
+                    'username' => $username,
+                    'password_hash' => $passwordHash,
+                ]);
+
+                // Redirection après succès
+                header("Location: success.php"); // À remplir avec la bonne URL
+                exit;
+            }
+        } catch (PDOException $e) {
+            $error = "Erreur de connexion ou d'insertion : " . htmlspecialchars($e->getMessage());
+        }
     }
 }
 ?>
@@ -76,7 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="submit" value="Inscription" class="submit-button"><br>
 
             <?php if (isset($error)) : ?>
-                <span style="color:red"><?php echo $error; ?></span><br>
+                <p class="error"><?= htmlspecialchars($error) ?></p>
             <?php endif; ?>
 
             <div class="small-text">
@@ -90,4 +119,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 </body>
 </html>
-
