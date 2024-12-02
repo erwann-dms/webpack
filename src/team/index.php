@@ -37,11 +37,13 @@
               <div class="photo-container"><img src="../photos/Ambqpic.jpg" alt=""></div>
                 <div class="name">Quentin AMBROZIC</div>
                   <div class="bio">
-                    <p>Je m’appelle Quentin, j’ai 18 ans et je suis originaire de Saint Cyr au Mont d’Or, dans la périphérie de l’agglomération lyonnaise.
-                    J’ai commencé à m'intéresser à l’informatique il y à 3 ans quand j’ai choisi les composants et construit mon PC fixe seul pour noël 2021. J’ai pu acquérir des connaissances en hardware. Suite à ça je me suis intéressé à la partie software en 2022 j’ai commencé à apprendre des bases de python de manière autodidacte . 
-                    J’ai pris connaissance de la cybersécurité cette même année lors d’une porte ouverte à Eurexpo pour avoir une idée de carrière vers laquelle je voudrais me diriger . Depuis je me suis inscrit et été admis à Guardia Cybersecurity School. Grâce à cette école j’ai pus accumulé des connaissances avec les différents intervenants.
-                    Ceci est un petit apperçu de ce que j’ai pus apprendre au cours du Bachelor que j’ai passé dans cette école: 
-                    J’ai pus obtenir des connaissances approfondies sur du DevSecOps ,pentest ,SIR ,OSINT...
+                    <p>
+Je m’appelle Quentin, j’ai 18 ans et je suis originaire de Saint-Cyr au Mont-d’Or, dans la périphérie de l’agglomération lyonnaise.
+J’ai commencé à m’intéresser à l’informatique il y a 3 ans quand j’ai choisi les composants et construit mon PC fixe seul pour Noël 2021. J’ai pu acquérir des connaissances en Hardware. Suite à ça, je me suis intéressé à la partie software. En 2022, j’ai commencé à apprendre des bases de Python de manière autodidacte.
+J’ai pris connaissance de la cybersécurité cette même année lors d’une porte ouverte à Eurexpo pour avoir une idée de carrière vers laquelle je voudrais me diriger. Depuis, je me suis inscrit et été admis à Guardia Cybersecurity School. Grâce à cette école, j’ai pu accumuler des connaissances avec les différents intervenants.
+Ceci est un petit aperçu de ce que j’ai pu apprendre au cours du Bachelor que j’ai passé dans cette école :
+J’ai pu obtenir des connaissances approfondies sur du DevSecOps, Pentest, SIR, OSINT…
+
                     </p>
                   </div>
                   <div class="buttons">
@@ -96,7 +98,7 @@
                   <a href="https://github.com/mrwn111" class="button" target="_blank">
                       <i class="fab fa-github"></i> GitHub
                   </a>
-                  <a href="votre-lien-vers-le-cv" class="button" target="_blank">
+                  <a href="/photos/cv.pdf" class="button" target="_blank" download>
                       <i class="fas fa-file-alt"></i> Mon CV
                   </a>
               </div>
@@ -182,11 +184,13 @@
               <div class="name">Erwann DUMAS</div>
               <div class="nickname">Shrekye</div>
               <div class="bio">
-                <p>Je m’appelle Erwann, j’ai 18 ans. Je suis passionné par l’informatique, 
-                  je me suis intéressé à la cybersécurité il y a 2 ans. J'ai pratiqué sur Root Me, TryHackMe et Hack The Box, 
-                  et réalisé divers projets durant ma première année de Bachelor en cybersécurité à Guardia. 
-                  Mon objectif est de faire carrière dans ce domaine et de contribuer à un monde plus sûr. 
-                  J'ai suivi divers MOOC et formations, notamment sur OWASP. Voici mes compétences :  
+                <p>
+
+Je m’appelle Erwann, j’ai 18 ans. Je suis passionné par l’informatique.
+Je me suis intéressé à la cybersécurité il y a 2 ans. J'ai pratiqué sur Root Me, TryHackMe et Hack The Box.
+Et réalisé divers projets durant ma première année de Bachelor en cybersécurité à Guardia.
+Mon objectif est de faire carrière dans ce domaine et de contribuer à un monde plus sûr.
+J'ai suivi divers MOOC et formations, notamment sur OWASP. Voici mes compétences : 
                   <br>
                   -Niveau Intermédiaire en Cryptanalyse, Stéganographie et Pentest, Programmation, Web
                   <br>
