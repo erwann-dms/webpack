@@ -1,9 +1,39 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'] ?? '';
+    $password = $_POST['password'] ?? '';
+
+    function isPasswordCompromised($password) {
+        $sha1Password = strtoupper(sha1($password)); 
+        $prefix = substr($sha1Password, 0, 5);
+        $suffix = substr($sha1Password, 5); 
+
+        $url = "https://api.pwnedpasswords.com/range/$prefix";
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $response = curl_exec($ch);
+        curl_close($ch);
+
+        return strpos($response, $suffix) !== false;
+    }
+
+    if (isPasswordCompromised($password)) {
+        $error = "Ce mot de passe a été compromis. Veuillez en choisir un autre.";
+    } else {
+        // Ici, ajouter la logique pour sauvegarder l'utilisateur
+        // Exemple : ajouter à la base de données
+        // header("Location: success.php");
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion</title>
+    <title>Inscription</title>
     <link rel="stylesheet" href="/Style/style.css">
     <link rel="shortcut icon" href="/photos/logo1.png" type="image/x-icon">
     <script type="text/javascript" src="/JS/dynamic.js" defer></script>
@@ -14,13 +44,13 @@
     <div class="login-container">
         <h2 class="title">S'inscrire</h2>
 
-        <form id="signupForm" action="#" method="post" class="form">
+        <form action="#" method="post" class="form">
             <input type="text" name="username" placeholder="Nom d'utilisateur" class="input" required><br>
-            <input type="password" id="password" name="password" placeholder="Mot de passe" class="input" required><br>
+            <input type="password" name="password" placeholder="Mot de passe" class="input" required><br>
             <input type="submit" value="Inscription" class="submit-button"><br>
 
-            <?php if (isset($_GET['error']) && $_GET['error'] === 'username_taken') : ?>
-                <p class="error">Nom d'utilisateur déjà utilisé.</p>
+            <?php if (isset($error)) : ?>
+                <p class="error"><?= htmlspecialchars($error) ?></p>
             <?php endif; ?>
 
             <div class="small-text">
@@ -32,27 +62,5 @@
         <button class="back-button" onclick="window.history.back()">Retour</button>
     </div>
 
-    <script>
-        async function checkPassword(password) {
-            const sha1 = CryptoJS.SHA1(password).toString(CryptoJS.enc.Hex).toUpperCase();
-            const prefix = sha1.substring(0, 5);
-            const suffix = sha1.substring(5);
-
-            const response = await fetch(`https://api.pwnedpasswords.com/range/${prefix}`);
-            const data = await response.text();
-
-            return data.includes(suffix);
-        }
-
-        document.getElementById("signupForm").addEventListener("submit", async (e) => {
-            const password = document.getElementById("password").value;
-            const isCompromised = await checkPassword(password);
-
-            if (isCompromised) {
-                e.preventDefault(); 
-                alert("Ce mot de passe a été compromis ! Veuillez en choisir un autre.");
-            }
-        });
-    </script>
 </body>
 </html>
