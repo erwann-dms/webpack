@@ -1,5 +1,5 @@
 <?php
-$conn = new PDO("mysql:host='mysql';dbname='Website'","root",getenv(MYSQL_ROOT_PASSWORD),);
+$conn = new PDO("mysql:host=mysql;port=3306;dbname=Website","root",getenv('MYSQL_ROOT_PASSWORD'),);
 
 $name = $password = "";
 $nameErr = $passwordErr = "";
