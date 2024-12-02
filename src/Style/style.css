@@ -322,6 +322,7 @@ nav.scrolled {
   color: inherit;
   box-shadow: 5px 2.5px 2.5px var(--text-color);
   margin-top: 20px;
+  overflow: hidden;
 }
 
 .f-container2:before {
@@ -696,7 +697,6 @@ nav.scrolled {
   animation-delay: -3s;
 }
 
-
 .photo-container {
   margin-top: 50px;
   width: 200px;
@@ -717,7 +717,7 @@ nav.scrolled {
   font-weight: bold;
   color: var(--header2-gradient);
   margin-top: 20px;
-  text-shadow: var(--header2-gradient)
+  text-shadow: var(--header2-gradient);
 }
 
 .nickname {
@@ -791,12 +791,6 @@ nav.scrolled {
   animation: snow 10s linear infinite;
 }
 
-@keyframes snow {
-  to {
-    transform: translateY(100vh);
-  }
-}
-
 .numbers .number:nth-child(odd) {
   animation-duration: 12s;
   animation-delay: -5s;
@@ -806,7 +800,6 @@ nav.scrolled {
   animation-duration: 15s;
   animation-delay: -3s;
 }
-
 
 .bd-qt {
   font-family: 'Roboto', sans-serif;
@@ -839,6 +832,56 @@ nav.scrolled {
   height: 100%;
   width: 100%;
 }
+
+/* Responsive styles */
+@media (max-width: 500px) {
+  .carousel {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .carousel-item {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .carousel-track {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+
+  .carousel-item {
+    scroll-snap-align: center;
+  }
+
+  .photo-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .name {
+    font-size: 24px;
+  }
+
+  .bio {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .carousel-button {
+    font-size: 24px;
+    padding: 5px;
+  }
+}
+
 
 .logo {
   width: 200px;
@@ -1013,26 +1056,6 @@ img {
 .back-button:hover {
   background-color: var(--highlight-gradient);
   transform: translateY(-3px);
-}
-
-.snowflakes {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none; 
-  z-index: 9999;
-  overflow: hidden;
-}
-
-.snowflake {
-  position: absolute;
-  font-size: 1.5em; 
-  color: white;
-  opacity: 0.8;
-  animation: snow 8s linear infinite;
-  pointer-events: none; 
 }
 
 .slider-container_partenaire {

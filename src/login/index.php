@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Connexion</title>
     <link rel="stylesheet" href="/Style/style.css">
     <link rel="shortcut icon" href="/photos/logo1.png" type="image/x-icon">
-    <script src="/JS/dynamic.js"></script>
+    <script type="text/javascript" src="/JS/dynamic.js" defer></script>
 </head>
 
 <body class="body-background">
