@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif (isPasswordCompromised($password)) {
         $error = "Ce mot de passe a été compromis. Veuillez en choisir un autre.";
     } else {
-        $dsn = "mysql:host=localhost;port=8000;dbname=Website;charset=utf8mb4";
+        $dsn = "mysql:host=mysql;port=30306;dbname=Website;charset=utf8mb4";
         $dbPassword = getenv('MYSQL_ROOT_PASSWORD'); 
         $dbUser = 'root';
 
