@@ -3,6 +3,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'] ?? '';
     $password = $_POST['password'] ?? '';
 
+    function isPasswordValid($password) {
+        $errors = [];
+
+        if (strlen($password) < 8) {
+            $errors[] = "Le mot de passe doit contenir au moins 8 caractères.";
+        }
+        if (!preg_match('/[A-Z]/', $password)) {
+            $errors[] = "Le mot de passe doit contenir au moins une lettre majuscule.";
+        }
+        if (!preg_match('/[a-z]/', $password)) {
+            $errors[] = "Le mot de passe doit contenir au moins une lettre minuscule.";
+        }
+        if (!preg_match('/\d/', $password)) {
+            $errors[] = "Le mot de passe doit contenir au moins un chiffre.";
+        }
+        if (!preg_match('/[\W_]/', $password)) {
+            $errors[] = "Le mot de passe doit contenir au moins un caractère spécial.";
+        }
+
+        return $errors;
+    }
+
     function isPasswordCompromised($password) {
         $sha1Password = strtoupper(sha1($password)); 
         $prefix = substr($sha1Password, 0, 5);
@@ -18,7 +40,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         return strpos($response, $suffix) !== false;
     }
 
-    if (isPasswordCompromised($password)) {
+    $validationErrors = isPasswordValid($password);
+
+    if (!empty($validationErrors)) {
+        $error = implode('<br>', $validationErrors);
+    } elseif (isPasswordCompromised($password)) {
         $error = "Ce mot de passe a été compromis. Veuillez en choisir un autre.";
     } else {
         // Ici, ajouter la logique pour sauvegarder l'utilisateur
@@ -64,3 +90,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 </body>
 </html>
+
