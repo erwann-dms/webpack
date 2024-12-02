@@ -834,7 +834,7 @@ nav.scrolled {
 }
 
 /* Responsive styles */
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .carousel {
     width: 100%;
     padding: 0 10px;
@@ -1056,26 +1056,6 @@ img {
 .back-button:hover {
   background-color: var(--highlight-gradient);
   transform: translateY(-3px);
-}
-
-.snowflakes {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none; 
-  z-index: 9999;
-  overflow: hidden;
-}
-
-.snowflake {
-  position: absolute;
-  font-size: 1.5em; 
-  color: white;
-  opacity: 0.8;
-  animation: snow 8s linear infinite;
-  pointer-events: none; 
 }
 
 .slider-container_partenaire {
