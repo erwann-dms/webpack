@@ -1,21 +1,39 @@
 <?php
-$conn = new PDO("mysql:host=mysql;port=3306;dbname=Website","root",getenv('MYSQL_ROOT_PASSWORD'),);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'] ?? '';
+    $password = $_POST['password'] ?? '';
 
-$name = $password = "";
-$nameErr = $passwordErr = "";
+    $dsn = "mysql:host=mysql;port=3306;dbname=Website;charset=utf8mb4";
+    $dbPassword = getenv('MYSQL_ROOT_PASSWORD'); 
+    $dbUser = 'root';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Collect and sanitize form data
-    if (empty($_POST["name"])) {
-        $nameErr = "Nom requis";
-    } else {
-        $name = htmlspecialchars($_POST["name"]);
-    }
+    try {
+        $pdo = new PDO($dsn, $dbUser, $dbPassword, [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+        ]);
 
-    if (empty($_POST["password"])) {
-        $passwordErr = "Mot de passe requis";
-    } else {
-        $password = htmlspecialchars($_POST["password"]);
+        $stmt = $pdo->prepare("SELECT password_hash FROM users WHERE login = :username");
+        $stmt->execute(['username' => $username]);
+        $user = $stmt->fetch();
+
+        if ($user) {
+            $passwordHash = sha1($password);
+
+            if ($passwordHash === $user['password_hash']) {
+                session_start();
+                $_SESSION['username'] = $username;
+
+                header("Location: dashboard.php"); 
+                exit;
+            } else {
+                $error = "Nom d'utilisateur ou mot de passe incorrect.";
+            }
+        } else {
+            $error = "Nom d'utilisateur ou mot de passe incorrect.";
+        }
+    } catch (PDOException $e) {
+        $error = "Erreur de connexion à la base de données : " . htmlspecialchars($e->getMessage());
     }
 }
 ?>
@@ -33,11 +51,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body class="body-background">
-
-    <!-- Neige en fond -->
-    <div class="snowflakes" aria-hidden="true">
-        <!-- Flocons générés dynamiquement par JavaScript -->
-    </div>
 
     <div class="login-container">
         <h2 class="title">Se Connecter</h2>
