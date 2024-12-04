@@ -75,9 +75,18 @@
   </a>
       
   <div class="f-container">
+      <a href="/projets" style="color: inherit;text-decoration: none;">
+        <div class="container-Team">
+          <h2 class="container" id="projets">Nos Projets</h2>
+          <p>Voici les différents projets sur lequelles nous avons pus travailler</p>
+        </div>
+      </a>
+    </div>
+
+  <div class="f-container">
       <a href="/partenaire" style="color: inherit;text-decoration: none;">
         <div class="container-Team">
-          <h2 class="container" id="team">Nos Partenaires</h2>
+          <h2 class="container" id="partenaires">Nos Partenaires</h2>
           <p>Voici les différents partenaires avec lequelles nous avons pus travailler</p>
         </div>
       </a>
