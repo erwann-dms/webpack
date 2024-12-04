@@ -31,10 +31,4 @@ if (isset($_COOKIE['auth_token'])) {
         error_log("Erreur de connexion à la base de données : " . $e->getMessage());
     }
 }
-
-if ($userLoggedIn) {
-    echo "Bonjour, $username ! Bienvenue sur la page protégée.";
-} else {
-    echo "Vous n'êtes pas connecté. Veuillez vous reconnecter.";
-}
 ?>
