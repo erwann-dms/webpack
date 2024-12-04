@@ -4,7 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'] ?? '';
 
     $dsn = "mysql:host=mysql;port=3306;dbname=Website;charset=utf8mb4";
-    $dbPassword = getenv('MYSQL_ROOT_PASSWORD'); 
+    $dbPassword = getenv('MYSQL_ROOT_PASSWORD');
     $dbUser = 'root';
 
     try {
@@ -18,35 +18,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $user = $stmt->fetch();
 
         if ($user) {
-            $passwordHash = hash('sha256',$password);
-                $token = bin2hex(random_bytes(32));
-                $expiration = date('Y-m-d H:i:s', time() + (86400 * 30)); // Expire dans 30 jours
+            $passwordHash = hash('sha256', $password);
+            $token = bin2hex(random_bytes(32));
+            $expiration = date('Y-m-d H:i:s', time() + (86400 * 30)); // Expire dans 30 jours
 
-                $stmt = $pdo->prepare("
+            $stmt = $pdo->prepare("
                     INSERT INTO sessions (token, user_login, expiration)
                     VALUES (:token, :username, :expiration)
                     ON DUPLICATE KEY UPDATE token = :token, expiration = :expiration
                 ");
-                $stmt->execute([
-                    'token' => $token,
-                    'username' => $username,
-                    'expiration' => $expiration,
-                ]);
+            $stmt->execute([
+                'token' => $token,
+                'username' => $username,
+                'expiration' => $expiration,
+            ]);
 
-                setcookie("auth_token", $token, [
-                    'expires' => time() + (86400 * 30),
-                    'path' => '/',
-                    'secure' => true, 
-                    'httponly' => true,
-                    'samesite' => 'Strict',  
-                ]);
+            setcookie("auth_token", $token, [
+                'expires' => time() + (86400 * 30),
+                'path' => '/',
+                'secure' => true,
+                'httponly' => true,
+                'samesite' => 'Strict',
+            ]);
 
 
             if ($passwordHash === $user['password_hash']) {
                 session_start();
                 $_SESSION['username'] = $username;
 
-                header("Location: success.php"); 
+                header("Location: /");
                 exit;
             } else {
                 $error = "Nom d'utilisateur ou mot de passe incorrect.";
@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <h2 class="title">Se Connecter</h2>
 
 
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="form">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="form">
 
             <input type="text" name="username" placeholder="Nom d'utilisateur" class="input"><br>
 
@@ -87,8 +87,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <input type="submit" value="Connexion" class="submit-button"><br>
 
-            <?php if (isset($_GET['error']) && $_GET['error'] === 'username_taken'): ?>
-                <p class="error">Nom d'utilisateur ou mot de passe erroné.</p>
+            <?php if (isset($error)) : ?>
+                <p class="error"><?= $error?></p>
             <?php endif; ?>
 
             <div class="small-text">
@@ -97,7 +97,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         </form>
 
-        <a href="http://localhost:8000"><button class="back-button">Retour</button></a>
+        <a href="/"><button class="back-button">Retour</button></a>
     </div>
 </body>
+
 </html>
