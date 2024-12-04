@@ -19,6 +19,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($user) {
             $passwordHash = hash('sha256',$password);
+                $token = bin2hex(random_bytes(32));
+                $expiration = date('Y-m-d H:i:s', time() + (86400 * 30)); // Expire dans 30 jours
+
+                $stmt = $pdo->prepare("
+                    INSERT INTO sessions (token, user_login, expiration)
+                    VALUES (:token, :username, :expiration)
+                    ON DUPLICATE KEY UPDATE token = :token, expiration = :expiration
+                ");
+                $stmt->execute([
+                    'token' => $token,
+                    'username' => $username,
+                    'expiration' => $expiration,
+                ]);
+
+                setcookie("auth_token", $token, [
+                    'expires' => time() + (86400 * 30),
+                    'path' => '/',
+                    'secure' => true, 
+                    'httponly' => true,
+                    'samesite' => 'Strict',  
+                ]);
+
+            $stmt = $pdo->
 
             if ($passwordHash === $user['password_hash']) {
                 session_start();

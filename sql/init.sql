@@ -25,3 +25,11 @@ CREATE TABLE IF NOT EXISTS likes (
     FOREIGN KEY (post_id) REFERENCES posts(post_id) ON DELETE CASCADE,
     UNIQUE (user_login, post_id)
 );
+
+CREATE TABLE if NOT EXISTS sessions (
+    token VARCHAR(255) NOT NULL
+    user_login VARCHAR(255) NOT NULL
+    expiration DATETIME
+    PRIMARY KEY (token),
+    FOREIGN KEY (user_login) REFERENCES users(login) ON DELETE CASCADE
+);

@@ -8,7 +8,7 @@
   <link rel="shortcut icon" href="/photos/logo1.png">
 </head>
 <body>
-
+<?php include $_SERVER['DOCUMENT_ROOT'] . "./common/verifytoken.php";?>
   <?php include $_SERVER['DOCUMENT_ROOT'] . "./common/navbar.php";?>
   <div class="bd-qt">
     
