@@ -33,18 +33,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'expiration' => $expiration,
             ]);
 
-            setcookie("auth_token", $token, [
-                'expires' => time() + (86400 * 30),
-                'path' => '/',
-                'secure' => true,
-                'httponly' => true,
-                'samesite' => 'Strict',
-            ]);
-
-
             if ($passwordHash === $user['password_hash']) {
                 session_start();
                 $_SESSION['username'] = $username;
+
+                setcookie("auth_token", $token, [
+                    'expires' => time() + (86400 * 30),
+                    'path' => '/',
+                    'secure' => true,
+                    'httponly' => true,
+                    'samesite' => 'Strict',
+                ]);
 
                 header("Location: /");
                 exit;
@@ -87,8 +86,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <input type="submit" value="Connexion" class="submit-button"><br>
 
-            <?php if (isset($error)) : ?>
-                <p class="error"><?= $error?></p>
+            <?php if (isset($error)): ?>
+                <p class="error"><?= $error ?></p>
             <?php endif; ?>
 
             <div class="small-text">
