@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     'samesite' => 'Strict',
                 ]);
 
-                header("Location: /");
+                header("Location: /account");
                 exit;
             } else {
                 $error = "Nom d'utilisateur ou mot de passe incorrect.";
