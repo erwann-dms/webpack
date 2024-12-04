@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 session_start();
                 $_SESSION['username'] = $username;
 
-                header("Location: dashboard.php"); 
+                header("Location: success.php"); 
                 exit;
             } else {
                 $error = "Nom d'utilisateur ou mot de passe incorrect.";
