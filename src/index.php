@@ -79,7 +79,7 @@
       <a href="/partenaire" style="color: inherit;text-decoration: none;">
         <div class="container-Team">
           <h2 class="container" id="team">Nos Partenaires</h2>
-          <p>Voici les différents partenaires avec lequelles nous avons pue travailler</p>
+          <p>Voici les différents partenaires avec lequelles nous avons pus travailler</p>
         </div>
       </a>
     </div>
