@@ -4,7 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'] ?? '';
 
     $dsn = "mysql:host=mysql;port=3306;dbname=Website;charset=utf8mb4";
-    $dbPassword = getenv('MYSQL_ROOT_PASSWORD');
+    $dbPassword = getenv('MYSQL_ROOT_PASSWORD'); 
     $dbUser = 'root';
 
     try {
