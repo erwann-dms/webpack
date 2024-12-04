@@ -62,7 +62,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
             <input type="password" name="password" placeholder="Mot de passe" class="input">
-            <span style="color:red"><?php echo $passwordErr; ?></span><br>
 
             <input type="submit" value="Connexion" class="submit-button"><br>
 
