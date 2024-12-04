@@ -22,7 +22,7 @@
           <div class="carousel-item" alt="Slide 1">
             <div class="bd-mrwn">
             
-              <div class="photo-container" style="border: none; overflow: visible;"><img src="../photos/Jean.png"></div>
+              <div class="photo-container" style="border: none; overflow: visible;"><img src="../photos/Jean.jpg"></div>
               <div class="name">Marie Palois</div>
               <div class="bio">
               <p>Google</p>
