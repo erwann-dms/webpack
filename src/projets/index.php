@@ -1,3 +1,29 @@
+<?php
+$dsn = "mysql:host=mysql;port=3306;dbname=Website;charset=utf8mb4";
+$dbPassword = getenv('MYSQL_ROOT_PASSWORD'); 
+$dbUser = 'root';
+
+// Récupérer le terme de recherche
+$search = isset($_GET['search']) ? $_GET['search'] : '';
+
+// Connexion à la base de données pour rechercher les services
+$services = [];
+try {
+    $pdo = new PDO($dsn, $dbUser, $dbPassword, [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    ]);
+    
+    // Requête pour rechercher les services correspondant au terme de recherche
+    $query = "SELECT * FROM services WHERE titre LIKE :search OR sujet LIKE :search";
+    $stmt = $pdo->prepare($query);
+    $stmt->execute(['search' => "%" . $search . "%"]);
+    $services = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    echo "Erreur de connexion à la base de données : " . htmlspecialchars($e->getMessage());
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -13,7 +39,29 @@
   <?php include $_SERVER['DOCUMENT_ROOT'] . "./common/navbar.php";?>
 
   <div class="bigdiv">
-      
+
+  <h2>Rechercher un article</h2>
+        <form method="GET" class="search-bar">
+            <input type="text" name="search" placeholder="Rechercher un article..." value="<?php echo htmlspecialchars($search); ?>">
+            <button type="submit">Rechercher</button>
+        </form>
+
+        <h2>Articles trouvés</h2>
+        <?php if (count($services) > 0): ?>
+            <ul class="service-list">
+                <?php foreach ($services as $service): ?>
+                    <li class="service-item">
+                        <strong><?php echo htmlspecialchars($service['titre']); ?></strong><br>
+                        <?php echo nl2br(htmlspecialchars($service['sujet'])); ?>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        <?php else: ?>
+            <p>Aucun article trouvé pour la recherche "<?php echo htmlspecialchars($search); ?>"</p>
+        <?php endif; ?>
+    </div>
+
+
   <div class="f-container">
         <div class="container-Team">
           <h2 class="container" id="team">Analyse et manipulation de données</h2>
