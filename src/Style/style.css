@@ -1222,3 +1222,7 @@ img {
   color: #B9BBBE;
   font-size: 0.9rem;
 }
+
+.error{
+  color: red;
+}
