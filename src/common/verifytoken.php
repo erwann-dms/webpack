@@ -32,9 +32,3 @@ if (isset($_COOKIE['auth_token'])) {
     }
 }
 
-if ($userLoggedIn) {
-    echo "Bonjour, $username ! Bienvenue sur la page protégée.";
-} else {
-    echo "Vous n'êtes pas connecté. Veuillez vous reconnecter.";
-}
-?>

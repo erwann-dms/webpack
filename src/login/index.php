@@ -41,7 +41,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     'samesite' => 'Strict',  
                 ]);
 
-            $stmt = $pdo->
 
             if ($passwordHash === $user['password_hash']) {
                 session_start();

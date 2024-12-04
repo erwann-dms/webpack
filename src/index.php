@@ -10,7 +10,6 @@
 </head>
 
 <body>
-  <?php include $_SERVER['DOCUMENT_ROOT'] . "./common/verifytoken.php";?>
   <?php include $_SERVER['DOCUMENT_ROOT'] . "./common/navbar.php";?>
 
   <div class="bigdiv">
