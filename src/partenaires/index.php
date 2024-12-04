@@ -48,7 +48,7 @@
               <div class="photo-container">
                   <img src="../photos/Marc.jpg" alt="ma photo">
               </div>
-              <div class="name">
+              <div class="name"> 
               Marc Gassy
               </div>
               <div class="bio">
@@ -68,6 +68,31 @@
             <p class="footer_p_partenaire">&copy; 2024 Tous droits réservés</p>
         </footer>
 
+
+        <script>
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+        const carouselTrack = document.getElementById("carouselTrack");
+        const carouselItems = document.querySelectorAll(".carousel-item");
+
+        let currentIndex = 0;
+        const totalItems = carouselItems.length;
+
+        function updateCarousel() {
+            const offset = -currentIndex * 100;
+            carouselTrack.style.transform = `translateX(${offset}%)`;
+        }
+
+        prevBtn.addEventListener("click", () => {
+            currentIndex = (currentIndex === 0) ? totalItems - 1 : currentIndex - 1;
+            updateCarousel();
+        });
+
+        nextBtn.addEventListener("click", () => {
+            currentIndex = (currentIndex === totalItems - 1) ? 0 : currentIndex + 1;
+            updateCarousel();
+        });
+    </script>
 
 </body>
 </html>
