@@ -72,8 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     'password_hash' => $passwordHash,
                 ]);
 
-                // Redirection après succès
-                header("Location: success.php"); // À remplir avec la bonne URL
+                header("Location: ../login/index.php"); 
                 exit;
             }
         } catch (PDOException $e) {
