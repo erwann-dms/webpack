@@ -34,12 +34,16 @@
   --team-gif: url('../photos/gif/team_clair.gif')
 }
 
+@font-face { 
+  font-family: Azonix; src: url('/photos/Azonix.otf'); 
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: Tw Cen MT , Condensed Extra Bold;
+  font-family: Azonix;
   margin: 0;
   background: var(--background-gradient);
   background-size: cover;
@@ -1081,7 +1085,7 @@ img {
 
 .header_partenaire {
   text-align: center;
-  position: absolute;
+  position: relative;
   top: 10%;
   width: 100%;
 }
