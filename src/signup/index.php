@@ -105,7 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="submit" value="Inscription" class="submit-button"><br>
 
             <?php if (isset($error)) : ?>
-                <p class="error"><?= htmlspecialchars($error) ?></p>
+                <p class="error"><?= $error ?></p>  /* class error a faire */
             <?php endif; ?>
 
             <div class="small-text">
