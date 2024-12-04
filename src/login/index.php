@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $user = $stmt->fetch();
 
         if ($user) {
-            $passwordHash = sha1($password);
+            $passwordHash = sha256($password);
 
             if ($passwordHash === $user['password_hash']) {
                 session_start();

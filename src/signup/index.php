@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($userExists) {
                 $error = "Ce nom d'utilisateur est déjà utilisé. Veuillez en choisir un autre.";
             } else {
-                $passwordHash = sha1($password);
+                $passwordHash = sha256($password);
 
                 $stmt = $pdo->prepare("INSERT INTO users (login, password_hash) VALUES (:username, :password_hash)");
                 $stmt->execute([
