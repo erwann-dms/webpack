@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS sessions (
 CREATE TABLE services (
     id INT AUTO_INCREMENT PRIMARY KEY,
     titre VARCHAR(255) NOT NULL,
-    sujet TEXT NOT NULL,
+    sujet TEXT NOT NULL
 );
 
 INSERT INTO services (titre, sujet) VALUES
