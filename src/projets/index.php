@@ -12,7 +12,6 @@ try {
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
     ]);
     
-    // Requête modifiée pour chercher uniquement dans les colonnes existantes
     $query = "SELECT * FROM services WHERE titre LIKE :search OR sujet LIKE :search";
     $stmt = $pdo->prepare($query);
     $stmt->execute(['search' => "%" . $search . "%"]);
@@ -52,9 +51,11 @@ try {
     <div class="flex">
         <?php foreach ($services as $service): ?>
             <div class="f-container">
+                <div class="container-Team">
                 <h2 class="container" id="team"><?php echo htmlspecialchars($service['titre']); ?></h2>
                 <p><?php echo nl2br(htmlspecialchars($service['sujet'])); ?></p>
             </div>
+        </div>
         <?php endforeach; ?>
     </div>
         </div>

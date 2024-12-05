@@ -44,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const prevButton = document.getElementById("prevBtn");
     const nextButton = document.getElementById("nextBtn");
 
-    // set lightmode
     setLightmode(cookieExists("lightmode"));
 
     let currentIndex = 0; 

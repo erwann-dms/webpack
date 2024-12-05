@@ -13,7 +13,7 @@
 
   <div class="bd-qt">
     
-    <div class="name">JavaScript</div><div class="bio-qt">
+  <h2 class="container" id="team" style="font-size:60px">JavaScrypt</h2><div class="bio-qt">
    <br>
     <p>JavaScript est un langage de programmation léger, interprété et orienté principalement vers le développement Web. Créé en 1995 par Brendan Eich, il est aujourd’hui un des piliers du Web moderne grâce à sa capacité à rendre les pages interactives.
       <br>Nous l’avons majoritairement utilisé pour ajouter des objets réactifs comme des bannières apparaissantes et disparaissantes en montant/descendant sur la page ou en cliquant sur un autre lien afin de donner une illusion d’une meilleure fluidité.:

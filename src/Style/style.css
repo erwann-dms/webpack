@@ -778,7 +778,7 @@ nav.scrolled {
   height: 100%;
   pointer-events: none;
   z-index: -1;
-  color: #ff0000;
+  color: #0026ff;
   font-size: 18px;
   white-space: nowrap;
 }
@@ -786,7 +786,7 @@ nav.scrolled {
 .number {
   position: absolute;
   top: -10px;
-  color: #ff0000;
+  color: #0026ff;
   font-size: 20px;
   user-select: none;
   animation: snow 10s linear infinite;
@@ -821,7 +821,7 @@ nav.scrolled {
   margin-top: 20px;
   font-size: 20px;
   color: var(--text-color-bio);
-  background-color: var(--bio-background);
+  background-color: var(--background-button);
   padding: 30px;
   width: 80%;
   max-width: 1100px;
@@ -1302,14 +1302,6 @@ img {
 
 .check[type="checkbox"] {
   display: none;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  margin-top: -0.25em;
-  margin-bottom: -0.25em;
 }
 
 .icon {

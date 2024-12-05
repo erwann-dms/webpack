@@ -13,7 +13,7 @@
 
   <div class="bd-qt">
     
-    <div class="name">PhP</div><div class="bio-qt">
+  <h2 class="container" id="team" style="font-size:60px">PHP</h2><div class="bio-qt">
    <br>
     <p>PHP (Hypertext Preprocessor) est un langage de programmation côté serveur, créé en 1994 par Rasmus Lerdorf. Conçu principalement pour le développement Web, il est utilisé pour générer des pages dynamiques et interactives.
      

@@ -12,7 +12,7 @@
   <?php include $_SERVER['DOCUMENT_ROOT'] . "./common/navbar.php";?>
   <div class="bd-qt">
     
-    <div class="name">Python</div><div class="bio-qt">
+    <h2 class="container" id="team" style="font-size:60px">Python</h2><div class="bio-qt">
    <br>
     <p>Python est un langage de programmation polyvalent, interprété et orienté objet, créé par Guido Van Rossum en 1991. Connu pour sa simplicité et sa lisibilité, il est particulièrement adapté aux débutants tout en offrant des fonctionnalités puissantes pour les développeurs expérimentés.
       <br>Nous avons pu faire l’expérience de pratiquer un projet avec Python en DevSecOps.

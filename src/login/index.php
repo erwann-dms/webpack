@@ -92,7 +92,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <div class="small-text">
                 <p>Pas encore inscrit ? <a href="/signup" class="link">Créer un compte</a></p>
-                <p><a href="#" class="link">Mot de passe oublié ?</a></p>
             </div>
         </form>
 
