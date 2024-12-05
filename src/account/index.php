@@ -64,7 +64,6 @@ try {
 
         <div class="user-info">
             <p><strong>Nom d'utilisateur:</strong> <?= htmlspecialchars($userInfo['login']) ?></p>
-            <p><strong>Date d'inscription:</strong> <?= htmlspecialchars($userInfo['created_at']) ?></p>
         </div>
 
         <a href="/logout"><button class="back-button">Se déconnecter</button></a>
