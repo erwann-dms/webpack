@@ -43,10 +43,11 @@ try {
       <input type="text" name="search" placeholder="Rechercher un article..." value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
       <button class="back-button" type="submit">Rechercher</button>
   </form>
-
+  <br>
+  <br>
   <h2>Articles trouvés</h2>
 </div>
-  <br>
+
   <?php if (count($services) > 0): ?>
     <div class="flex">
         <?php foreach ($services as $service): ?>
