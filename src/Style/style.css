@@ -1226,3 +1226,35 @@ img {
 .error{
   color: red;
 }
+
+.search-bar input[type="text"] {
+  background-color: var(--background-button);
+  color: var(--text-color);
+  border: 1px solid; 
+  border-radius: 5px; 
+  padding: 10px; 
+  font-size: 16px; 
+  width: 250px; 
+  transition: border 0.3s ease;
+}
+
+.search-bar input[type="text"]:focus {
+  border-color: var(--background-button);
+  background-color: var(--background-button);
+  outline: none; 
+}
+
+.search-bar button {
+  background-color: var(--background-button); 
+  color: var(--text-color); 
+  border: none; 
+  padding: 10px 15px; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.search-bar button:hover {
+  background-color: var(--background-main); 
+}
