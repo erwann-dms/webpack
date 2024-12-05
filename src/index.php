@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
   <?php include $_SERVER['DOCUMENT_ROOT'] . "./common/navbar.php";?>
 
   <div class="bigdiv">
@@ -18,7 +17,7 @@
       <a href="/team" style="color: inherit;text-decoration: none;">
         <div class="container-Team">
           <h2 class="container" id="team">Team</h2>
-          <img src="<?php echo $lightmode == 'true' ? '../photos/gif/team_clair.gif' : '../photos/gif/team_sombre.gif'; ?>" alt="Python GIF" class="team-gif" style="width:auto;height:auto">
+          <img src="<?php echo $lightmode == 'true' ? '../photos/gif/team_clair.gif' : '../photos/gif/team_sombre.gif'; ?>" alt="Python GIF" class="team-gif" style="width: 580px ;height:350px ;overflow:hidden;">
           <p>Présentation de la Team: La team se compose de 4 personnes Merwan.C ,Quentin.A ,Paul.B ,Erwann.D . Nous sommes une équipe de développeurs fullstack très polyvalente. Nous avons des connaissances dans de multiples langages de programmation ainsi que des connaissances en DevSecOps ,Pentest ,SIR ,OSINT .Nous proposons nos services autant aux entreprises qu’aux particuliers.</p>
         </div>
       </a>
@@ -74,6 +73,24 @@
       <p>Nous avons pu mettre en pratique des connaissances de PHP...</p>
     </div>
   </a>
+      
+  <div class="f-container">
+      <a href="/projets" style="color: inherit;text-decoration: none;">
+        <div class="container-Team">
+          <h2 class="container" id="projets">Nos Projets</h2>
+          <p>Voici les différents projets sur lequelles nous avons pus travailler</p>
+        </div>
+      </a>
+    </div>
+
+  <div class="f-container">
+      <a href="/partenaire" style="color: inherit;text-decoration: none;">
+        <div class="container-Team">
+          <h2 class="container" id="partenaires">Nos Partenaires</h2>
+          <p>Voici les différents partenaires avec lequelles nous avons pus travailler</p>
+        </div>
+      </a>
+    </div>
 </div>
 </body>
 </html>
