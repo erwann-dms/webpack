@@ -46,11 +46,20 @@ try {
 <h2>Articles trouvés</h2>
 <?php
 
+try {
+    $pdo = new PDO($dsn, $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die('Erreur : ' . $e->getMessage());
+}
+
+// Récupération de la recherche
 $search = isset($_GET['search']) ? trim($_GET['search']) : '';
 
+// Recherche des articles dans la table `services`
 $services = [];
 if (!empty($search)) {
-    $query = "SELECT titre, sujet FROM articles WHERE titre LIKE :search";
+    $query = "SELECT titre, sujet FROM services WHERE titre LIKE :search";
     $stmt = $pdo->prepare($query);
     $stmt->execute(['search' => '%' . $search . '%']);
     $services = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -69,6 +78,7 @@ if (!empty($search)) {
 <?php else: ?>
     <p>Aucun article trouvé pour la recherche "<?php echo htmlspecialchars($search); ?>"</p>
 <?php endif; ?>
+
 
     </div>
 
