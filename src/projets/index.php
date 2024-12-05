@@ -41,24 +41,48 @@ try {
   <div class="bigdiv">
 
   <h2>Rechercher un article</h2>
-        <form method="GET" class="search-bar">
-            <input type="text" name="search" placeholder="Rechercher un article..." value="<?php echo htmlspecialchars($search); ?>">
-            <button type="submit">Rechercher</button>
-        </form>
+<form method="GET" class="search-bar">
+    <input type="text" name="search" placeholder="Rechercher un article..." value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
+    <button type="submit">Rechercher</button>
+</form>
 
-        <h2>Articles trouvés</h2>
-        <?php if (count($services) > 0): ?>
-            <ul class="service-list">
-                <?php foreach ($services as $service): ?>
-                    <li class="service-item">
-                        <strong><?php echo htmlspecialchars($service['titre']); ?></strong><br>
-                        <?php echo nl2br(htmlspecialchars($service['sujet'])); ?>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
-        <?php else: ?>
-            <p>Aucun article trouvé pour la recherche "<?php echo htmlspecialchars($search); ?>"</p>
-        <?php endif; ?>
+<h2>Articles trouvés</h2>
+<?php
+$dsn = "mysql:host=mysql;port=3306;dbname=Website;charset=utf8mb4";
+$dbPassword = getenv('MYSQL_ROOT_PASSWORD'); 
+$dbUser = 'root';
+
+try {
+    $pdo = new PDO($dsn, $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die('Erreur : ' . $e->getMessage());
+}
+
+$search = isset($_GET['search']) ? trim($_GET['search']) : '';
+
+$services = [];
+if (!empty($search)) {
+    $query = "SELECT titre, sujet FROM articles WHERE titre LIKE :search";
+    $stmt = $pdo->prepare($query);
+    $stmt->execute(['search' => '%' . $search . '%']);
+    $services = $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+?>
+
+<?php if (count($services) > 0): ?>
+    <ul class="service-list">
+        <?php foreach ($services as $service): ?>
+            <li class="service-item">
+                <strong><?php echo htmlspecialchars($service['titre']); ?></strong><br>
+                <?php echo nl2br(htmlspecialchars($service['sujet'])); ?>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+<?php else: ?>
+    <p>Aucun article trouvé pour la recherche "<?php echo htmlspecialchars($search); ?>"</p>
+<?php endif; ?>
+
     </div>
 
 
