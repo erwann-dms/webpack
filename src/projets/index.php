@@ -3,10 +3,8 @@ $dsn = "mysql:host=mysql;port=3306;dbname=Website;charset=utf8mb4";
 $dbPassword = getenv('MYSQL_ROOT_PASSWORD'); 
 $dbUser = 'root';
 
-// Récupérer le terme de recherche
 $search = isset($_GET['search']) ? $_GET['search'] : '';
 
-// Connexion à la base de données pour rechercher les services
 $services = [];
 try {
     $pdo = new PDO($dsn, $dbUser, $dbPassword, [
@@ -14,7 +12,6 @@ try {
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
     ]);
     
-    // Requête pour rechercher les services correspondant au terme de recherche
     $query = "SELECT * FROM services WHERE titre LIKE :search OR sujet LIKE :search";
     $stmt = $pdo->prepare($query);
     $stmt->execute(['search' => "%" . $search . "%"]);
