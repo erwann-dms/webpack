@@ -1252,3 +1252,11 @@ img {
 .search-bar button:hover {
   background-color: var(--background-main); 
 }
+
+.flex {
+  padding: 20px;
+}
+
+.center {
+  
+}
