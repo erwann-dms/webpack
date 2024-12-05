@@ -13,7 +13,7 @@
   
     <div class="bd-qt">
     
-      <div class="name">Java</div><div class="bio-qt">
+    <h2 class="container" id="team" style="font-size:60px">Java</h2><div class="bio-qt">
       <p> Java est un langage de programmation orienté objet, créé par Sun Microsystems en 1995 et désormais géré par Oracle. Il est reconnu pour sa portabilité, sa robustesse et sa capacité à créer des applications multiplateformes. Nous avons pu pratiquer du Java en codant des jeux en tant que projets indépendants. </p>
       <br>
       <p>Nous avons pu faire l’expérience de pratiquer un projet avec Java en codant des jeux en tant que projets indépendants.  
