@@ -37,7 +37,7 @@ try {
   <?php include $_SERVER['DOCUMENT_ROOT'] . "./common/navbar.php";?>
 
   <div class="bigdiv">
-
+    <div class="center">
   <h2>Rechercher un article</h2>
   <form method="GET" class="search-bar">
       <input type="text" name="search" placeholder="Rechercher un article..." value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
@@ -45,6 +45,8 @@ try {
   </form>
 
   <h2>Articles trouvés</h2>
+</div>
+  <br>
   <?php if (count($services) > 0): ?>
     <div class="flex">
         <?php foreach ($services as $service): ?>
@@ -54,13 +56,16 @@ try {
             </div>
         <?php endforeach; ?>
     </div>
+        </div>
 <?php else: ?>
+    <div class="flex">
     <div class="f-container">
         <div class="container-Team">
             <h2 class="container" id="team">Aucun article trouvé</h2>
             <p>Aucun article trouvé pour la recherche "<?php echo htmlspecialchars($search); ?>"</p>
         </div>
     </div>
+</div>
 <?php endif; ?>
     </div>
 </body>
