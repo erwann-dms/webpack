@@ -46,9 +46,9 @@ try {
 
   <h2>Articles trouvés</h2>
   <?php if (count($services) > 0): ?>
-    <div class="f-container">
+    <div class="flex">
         <?php foreach ($services as $service): ?>
-            <div class="container-Team">
+            <div class="f-container">
                 <h2 class="container" id="team"><?php echo htmlspecialchars($service['titre']); ?></h2>
                 <p><?php echo nl2br(htmlspecialchars($service['sujet'])); ?></p>
             </div>
