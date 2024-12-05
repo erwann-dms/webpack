@@ -45,10 +45,6 @@ try {
 
 <h2>Articles trouvés</h2>
 <?php
-// Connexion à la base de données (remplacez par vos paramètres)
-$dsn = 'mysql:host=localhost;dbname=nom_de_votre_bdd;charset=utf8';
-$username = 'votre_utilisateur';
-$password = 'votre_mot_de_passe';
 
 try {
     $pdo = new PDO($dsn, $username, $password);
