@@ -6,3 +6,22 @@ services:
     container_name: "php-apache"
     ports:
       - "8000:80"
+    env_file:
+      - secrets.env
+    depends_on:
+      - mysql
+
+  mysql:
+    container_name: "mysql"
+    image: ubuntu/mysql:8.0-22.04_beta
+    environment:
+      - TZ=UTC
+      - MYSQL_DATABASE=Website
+    env_file:
+      - secrets.env
+    ports:
+      - 30306:3306
+    volumes:
+      - ./db:/var/lib/mysql
+      - ./sql:/docker-entrypoint-initdb.d
+
