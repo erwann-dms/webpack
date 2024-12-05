@@ -52,9 +52,11 @@ try {
     <div class="flex">
         <?php foreach ($services as $service): ?>
             <div class="f-container">
+                <div class="container-Team">
                 <h2 class="container" id="team"><?php echo htmlspecialchars($service['titre']); ?></h2>
                 <p><?php echo nl2br(htmlspecialchars($service['sujet'])); ?></p>
             </div>
+        </div>
         <?php endforeach; ?>
     </div>
         </div>
