@@ -48,16 +48,6 @@ try {
 
 <h2>Articles trouvés</h2>
 <?php
-$dsn = "mysql:host=mysql;port=3306;dbname=Website;charset=utf8mb4";
-$dbPassword = getenv('MYSQL_ROOT_PASSWORD'); 
-$dbUser = 'root';
-
-try {
-    $pdo = new PDO($dsn, $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die('Erreur : ' . $e->getMessage());
-}
 
 $search = isset($_GET['search']) ? trim($_GET['search']) : '';
 
