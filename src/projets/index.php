@@ -12,7 +12,6 @@ try {
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
     ]);
     
-    // Requête modifiée pour chercher uniquement dans les colonnes existantes
     $query = "SELECT * FROM services WHERE titre LIKE :search OR sujet LIKE :search";
     $stmt = $pdo->prepare($query);
     $stmt->execute(['search' => "%" . $search . "%"]);
