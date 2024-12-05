@@ -778,7 +778,7 @@ nav.scrolled {
   height: 100%;
   pointer-events: none;
   z-index: -1;
-  color: #ff0000;
+  color: #0026ff;
   font-size: 18px;
   white-space: nowrap;
 }
@@ -786,7 +786,7 @@ nav.scrolled {
 .number {
   position: absolute;
   top: -10px;
-  color: #ff0000;
+  color: #0026ff;
   font-size: 20px;
   user-select: none;
   animation: snow 10s linear infinite;
