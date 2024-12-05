@@ -158,7 +158,7 @@ nav.scrolled {
 .grosse-flex {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 20px;
   gap: 20px;
 }
@@ -604,7 +604,6 @@ nav.scrolled {
 .main {
   background-color: var(--background-main);
   color: var(--text-color);
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 30px;
 }
@@ -651,7 +650,6 @@ nav.scrolled {
 }
 
 .bd-mrwn {
-  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   background-color: var(--background-gradient);
@@ -780,7 +778,6 @@ nav.scrolled {
   height: 100%;
   pointer-events: none;
   z-index: -1;
-  font-family: 'Courier New', monospace;
   color: #ff0000;
   font-size: 18px;
   white-space: nowrap;
@@ -806,7 +803,6 @@ nav.scrolled {
 }
 
 .bd-qt {
-  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   background-color: var(--background-gradient);
@@ -942,7 +938,6 @@ img {
 }
 
 .body-background {
-  font-family: Arial, sans-serif;
   background-color: var(--background-main);
   color: var(--text-color);
   margin: 0;
@@ -1070,7 +1065,6 @@ img {
 
 
 .body_partenaire {
-  font-family: 'Arial', sans-serif;
   background-color: #2C2F3A;
   color: #FFF;
   display: flex;
