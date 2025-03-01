@@ -109,7 +109,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <div class="small-text">
                 <p>Déjà inscrit ? <a href="../login" class="link">J'ai déjà un compte</a></p>
-                <p><a href="#" class="link">Mot de passe oublié ?</a></p>
             </div>
         </form>
 
